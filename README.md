@@ -48,6 +48,26 @@ python3 -m http.server 8001 -d site
 - `mobile`
 - `ics`
 
+## Публикация на GitHub Pages
+
+В репозитории уже добавлен workflow для деплоя Pages из папки `site/`: `.github/workflows/pages.yml`.
+
+1) Закоммить и запушь изменения в `main`:
+
+```bash
+cd Mitre
+git add .
+git commit -m "Deploy GitHub Pages"
+git push
+```
+
+2) На GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+3) Дождись завершения workflow **Deploy GitHub Pages** (Actions).
+
+Сайт будет доступен по адресу вида:
+- `https://<username>.github.io/<repo>/`
+
 ## Атрибуция и лицензия
 
 ATT&CK® — торговая марка The MITRE Corporation. Этот сайт **не является** официальным продуктом MITRE.

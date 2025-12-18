@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ATT&CK на русском (неофициально)</title>
+    <meta
+      name="description"
+      content="Неофициальный русскоязычный интерфейс для MITRE ATT&CK (Enterprise/Mobile/ICS) на основе официальных STIX данных."
+    />
+    <link rel="stylesheet" href="assets/app.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <a class="brand__title" href="#/">ATT&amp;CK на русском</a>
+          <div class="brand__subtitle">неофициальный перевод MITRE ATT&amp;CK</div>
+        </div>
+
+        <div class="controls">
+          <nav class="nav" aria-label="Навигация">
+            <a id="navMatrix" class="link" href="#/">Матрица</a>
+            <a id="navTechniques" class="link" href="#/techniques">Техники</a>
+            <a id="navGroups" class="link" href="#/groups">Группы</a>
+            <a id="navSoftware" class="link" href="#/software">ПО</a>
+            <a id="navMitigations" class="link" href="#/mitigations">Митигации</a>
+          </nav>
+
+          <label class="control">
+            <span class="control__label">Домен</span>
+            <select id="domainSelect" class="control__input">
+              <option value="enterprise">Enterprise</option>
+              <option value="mobile">Mobile</option>
+              <option value="ics">ICS</option>
+            </select>
+          </label>
+
+          <button id="langToggle" class="btn" type="button" title="Переключить язык">
+            RU
+          </button>
+
+          <form id="searchForm" class="search" autocomplete="off">
+            <input
+              id="searchInput"
+              class="search__input"
+              name="q"
+              type="search"
+              placeholder="Поиск: T1059, PowerShell, фишинг…"
+            />
+            <button class="btn" type="submit">Найти</button>
+          </form>
+
+          <a id="navAbout" class="link" href="#/about">О проекте</a>
+        </div>
+      </header>
+
+      <main id="main" class="main" aria-live="polite"></main>
+
+      <footer class="footer">
+        <div class="footer__small">
+          ATT&amp;CK® — торговая марка The MITRE Corporation. Этот сайт не является официальным продуктом MITRE.
+        </div>
+        <div class="footer__small">
+          Содержимое ATT&amp;CK распространяется по лицензии CC BY 4.0: https://attack.mitre.org/ • https://creativecommons.org/licenses/by/4.0/
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>

@@ -29,6 +29,54 @@ HTML_LANG_RE = re.compile(r"(<html\\s[^>]*?)\\slang=\"[^\"]*\"", re.I)
 FONT_URL_RE = re.compile(r"url\(([^)]+)\)")
 OVERRIDE_LINK = '<link rel="stylesheet" href="override.css">'
 TRANSLATE_SCRIPT = '<script src="translate.js" defer></script>'
+CLEAR_SCRIPT = """<script>
+          (function () {
+            try {
+              var url = new URL(window.location.href);
+              var token = url.searchParams.get("clear");
+              if (!token) return;
+              var clearedKey = "attack_nav_cleared_token";
+              try {
+                if (window.localStorage && localStorage.getItem(clearedKey) === token) {
+                  url.searchParams.delete("clear");
+                  if (window.history && history.replaceState) {
+                    history.replaceState(null, "", url.toString());
+                  }
+                  return;
+                }
+              } catch (e) {}
+              var keepDomain = null;
+              var keepLang = null;
+              try {
+                if (window.localStorage) {
+                  keepDomain = localStorage.getItem("attack_domain");
+                  keepLang = localStorage.getItem("attack_lang");
+                  localStorage.clear();
+                  if (keepDomain) localStorage.setItem("attack_domain", keepDomain);
+                  if (keepLang) localStorage.setItem("attack_lang", keepLang);
+                  localStorage.setItem(clearedKey, token);
+                }
+              } catch (e) {}
+              try {
+                if (window.sessionStorage) sessionStorage.clear();
+              } catch (e) {}
+              try {
+                if (window.indexedDB && typeof indexedDB.databases === "function") {
+                  indexedDB.databases().then(function (dbs) {
+                    for (var i = 0; i < dbs.length; i++) {
+                      var db = dbs[i];
+                      if (db && db.name) indexedDB.deleteDatabase(db.name);
+                    }
+                  });
+                }
+              } catch (e) {}
+              url.searchParams.delete("clear");
+              if (window.history && history.replaceState) {
+                history.replaceState(null, "", url.toString());
+              }
+            } catch (e) {}
+          })();
+        </script>"""
 FONT_CSS_URLS = {
     "material-icons.css": "https://fonts.googleapis.com/icon?family=Material+Icons",
     "material-symbols.css": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
@@ -905,52 +953,41 @@ TRANSLATE_JS = r"""(() => {
     }
   };
 
-  const getDomainParam = () => {
-    const params = new URL(window.location.href).searchParams;
-    const raw = (params.get("domain") || "").toLowerCase();
-    if (raw === "mobile" || raw === "ics" || raw === "enterprise") return raw;
-    return "enterprise";
-  };
-
-  const tryAutoCreateLayer = () => {
-    if (window.__ATTACK_NAV_AUTO_LAYER__) return true;
-    if (document.querySelector(".matrix, .techniques-table")) {
-      window.__ATTACK_NAV_AUTO_LAYER__ = true;
-      return true;
+  const maybeClearNavigatorState = () => {
+    let params;
+    try {
+      params = new URL(window.location.href).searchParams;
+    } catch (_) {
+      return;
     }
-    const domain = getDomainParam();
-    const labels = { enterprise: "Enterprise", mobile: "Mobile", ics: "ICS" };
-    const targetLabel = labels[domain] || "Enterprise";
-    const header = document.querySelector("mat-expansion-panel mat-expansion-panel-header");
-    if (header && header.getAttribute("aria-expanded") !== "true") {
-      header.click();
-    }
-    const buttons = Array.from(document.querySelectorAll(".button-group button"));
-    const match = buttons.find((btn) => btn.textContent.trim().toLowerCase() === targetLabel.toLowerCase());
-    if (match) {
-      match.click();
-      window.__ATTACK_NAV_AUTO_LAYER__ = true;
-      return true;
-    }
-    return false;
-  };
-
-  const scheduleAutoLayer = () => {
-    if (window.__ATTACK_NAV_AUTO_LAYER__) return;
-    let attempts = 0;
-    const timer = setInterval(() => {
-      attempts += 1;
-      if (tryAutoCreateLayer() || attempts >= 20) {
-        clearInterval(timer);
+    const token = params.get("clear");
+    if (!token) return;
+    const clearedKey = "attack_nav_cleared_token";
+    try {
+      if (localStorage.getItem(clearedKey) === token) {
+        return;
       }
-    }, 400);
+      const keep = {
+        attack_domain: localStorage.getItem("attack_domain"),
+        attack_lang: localStorage.getItem("attack_lang")
+      };
+      localStorage.clear();
+      if (keep.attack_domain) localStorage.setItem("attack_domain", keep.attack_domain);
+      if (keep.attack_lang) localStorage.setItem("attack_lang", keep.attack_lang);
+      localStorage.setItem(clearedKey, token);
+      const url = new URL(window.location.href);
+      url.searchParams.delete("clear");
+      window.location.replace(url.toString());
+    } catch (_) {
+      return;
+    }
   };
 
   const apply = () => {
+    maybeClearNavigatorState();
     translateTree(document.body);
     patchLinks(document);
     patchTitle();
-    scheduleAutoLayer();
   };
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", apply);
@@ -1213,6 +1250,8 @@ def _sanitize_index(html: str) -> str:
     html = GTAG_INLINE_RE.sub("", html)
     if BASE_RE.search(html):
         html = BASE_RE.sub('<base href="./">', html)
+    if CLEAR_SCRIPT not in html:
+        html = re.sub(r'<base href="./">', f'<base href="./">{CLEAR_SCRIPT}', html, count=1)
     if HTML_LANG_RE.search(html):
         html = HTML_LANG_RE.sub(r"\1 lang=\"ru\"", html, count=1)
     for link in FONT_LINKS:

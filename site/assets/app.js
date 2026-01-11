@@ -1106,15 +1106,8 @@ function renderNavigator(vm) {
   const route = parseHash();
   const navBase = new URL(NAVIGATOR_URL, window.location.href);
   const layerAbsUrlDefault = new URL(`layers/${state.domain}.json`, navBase).href;
-  const defaultLayer = buildNavigatorLayer({
-    name: `${s.matrixTitle} (${state.domain})`,
-    description: s.navigatorBody,
-    domain: state.domain,
-    techniqueIds: (vm.base.techniques || []).map((t) => t.id),
-  });
-  const defaultLayerUrl = layerAbsUrlDefault;
   const layerParam = route.params.get("layer");
-  let layerUrl = defaultLayerUrl;
+  let layerUrl = null;
   if (layerParam) {
     try {
       layerUrl = decodeURIComponent(layerParam);
@@ -1122,9 +1115,14 @@ function renderNavigator(vm) {
       layerUrl = layerParam;
     }
   }
-  const navUrl = `${NAVIGATOR_URL}?domain=${encodeURIComponent(state.domain)}&lang=${encodeURIComponent(
+  if (!layerUrl && route.params.get("autolayer") === "1") {
+    layerUrl = layerAbsUrlDefault;
+  }
+  const clearParam = layerUrl ? "" : `&clear=${Date.now()}`;
+  const baseUrl = `${NAVIGATOR_URL}?domain=${encodeURIComponent(state.domain)}&lang=${encodeURIComponent(
     state.lang
-  )}#layerURL=${encodeURIComponent(layerUrl)}`;
+  )}${clearParam}`;
+  const navUrl = layerUrl ? `${baseUrl}#layerURL=${encodeURIComponent(layerUrl)}` : baseUrl;
   const wrap = document.createElement("section");
   wrap.className = "navigator-page";
   wrap.innerHTML = `

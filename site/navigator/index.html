@@ -5,6 +5,54 @@
         
         <meta charset="utf-8">
         <base href="./">
+        <script>
+          (function () {
+            try {
+              var url = new URL(window.location.href);
+              var token = url.searchParams.get("clear");
+              if (!token) return;
+              var clearedKey = "attack_nav_cleared_token";
+              try {
+                if (window.localStorage && localStorage.getItem(clearedKey) === token) {
+                  url.searchParams.delete("clear");
+                  if (window.history && history.replaceState) {
+                    history.replaceState(null, "", url.toString());
+                  }
+                  return;
+                }
+              } catch (e) {}
+              var keepDomain = null;
+              var keepLang = null;
+              try {
+                if (window.localStorage) {
+                  keepDomain = localStorage.getItem("attack_domain");
+                  keepLang = localStorage.getItem("attack_lang");
+                  localStorage.clear();
+                  if (keepDomain) localStorage.setItem("attack_domain", keepDomain);
+                  if (keepLang) localStorage.setItem("attack_lang", keepLang);
+                  localStorage.setItem(clearedKey, token);
+                }
+              } catch (e) {}
+              try {
+                if (window.sessionStorage) sessionStorage.clear();
+              } catch (e) {}
+              try {
+                if (window.indexedDB && typeof indexedDB.databases === "function") {
+                  indexedDB.databases().then(function (dbs) {
+                    for (var i = 0; i < dbs.length; i++) {
+                      var db = dbs[i];
+                      if (db && db.name) indexedDB.deleteDatabase(db.name);
+                    }
+                  });
+                }
+              } catch (e) {}
+              url.searchParams.delete("clear");
+              if (window.history && history.replaceState) {
+                history.replaceState(null, "", url.toString());
+              }
+            } catch (e) {}
+          })();
+        </script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="favicon.ico">

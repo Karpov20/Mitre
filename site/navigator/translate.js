@@ -401,52 +401,41 @@
     }
   };
 
-  const getDomainParam = () => {
-    const params = new URL(window.location.href).searchParams;
-    const raw = (params.get("domain") || "").toLowerCase();
-    if (raw === "mobile" || raw === "ics" || raw === "enterprise") return raw;
-    return "enterprise";
-  };
-
-  const tryAutoCreateLayer = () => {
-    if (window.__ATTACK_NAV_AUTO_LAYER__) return true;
-    if (document.querySelector(".matrix, .techniques-table")) {
-      window.__ATTACK_NAV_AUTO_LAYER__ = true;
-      return true;
+  const maybeClearNavigatorState = () => {
+    let params;
+    try {
+      params = new URL(window.location.href).searchParams;
+    } catch (_) {
+      return;
     }
-    const domain = getDomainParam();
-    const labels = { enterprise: "Enterprise", mobile: "Mobile", ics: "ICS" };
-    const targetLabel = labels[domain] || "Enterprise";
-    const header = document.querySelector("mat-expansion-panel mat-expansion-panel-header");
-    if (header && header.getAttribute("aria-expanded") !== "true") {
-      header.click();
-    }
-    const buttons = Array.from(document.querySelectorAll(".button-group button"));
-    const match = buttons.find((btn) => btn.textContent.trim().toLowerCase() === targetLabel.toLowerCase());
-    if (match) {
-      match.click();
-      window.__ATTACK_NAV_AUTO_LAYER__ = true;
-      return true;
-    }
-    return false;
-  };
-
-  const scheduleAutoLayer = () => {
-    if (window.__ATTACK_NAV_AUTO_LAYER__) return;
-    let attempts = 0;
-    const timer = setInterval(() => {
-      attempts += 1;
-      if (tryAutoCreateLayer() || attempts >= 20) {
-        clearInterval(timer);
+    const token = params.get("clear");
+    if (!token) return;
+    const clearedKey = "attack_nav_cleared_token";
+    try {
+      if (localStorage.getItem(clearedKey) === token) {
+        return;
       }
-    }, 400);
+      const keep = {
+        attack_domain: localStorage.getItem("attack_domain"),
+        attack_lang: localStorage.getItem("attack_lang")
+      };
+      localStorage.clear();
+      if (keep.attack_domain) localStorage.setItem("attack_domain", keep.attack_domain);
+      if (keep.attack_lang) localStorage.setItem("attack_lang", keep.attack_lang);
+      localStorage.setItem(clearedKey, token);
+      const url = new URL(window.location.href);
+      url.searchParams.delete("clear");
+      window.location.replace(url.toString());
+    } catch (_) {
+      return;
+    }
   };
 
   const apply = () => {
+    maybeClearNavigatorState();
     translateTree(document.body);
     patchLinks(document);
     patchTitle();
-    scheduleAutoLayer();
   };
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", apply);

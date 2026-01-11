@@ -8,6 +8,7 @@
 - Группы (карточка + связи)
 - ПО (malware/tool) (карточка + связи)
 - Митигации (карточка + связи)
+- ATT&CK Navigator (полная версия внутри сайта)
 
 ## Быстрый старт
 
@@ -17,11 +18,26 @@
 python3 scripts/fetch_attack.py --domain all
 ```
 
+1.1) (Опционально) Скачать MITRE ATT&CK Navigator внутрь сайта (локальная версия, работает с нашими данными):
+
+```bash
+python3 scripts/fetch_navigator.py
+```
+
+Navigator берет данные из `data/raw/*.stix.json` и создает локальный индекс в `site/navigator/assets/index.json`.
+Ссылки из Navigator ведут на страницы нашего сайта.
+
 2) (Опционально) Сгенерировать русский перевод (патч-перевод поверх английской базы):
 
 ```bash
-python3 -m pip install argostranslate
+python3 -m pip install deep-translator
 python3 scripts/translate_attack_ru.py --domain all
+```
+
+Если Google начинает ограничивать запросы, добавьте паузу:
+
+```bash
+python3 scripts/translate_attack_ru.py --domain all --sleep 0.2
 ```
 
 3) Запустить локальный статический сервер:

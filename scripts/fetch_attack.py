@@ -17,6 +17,12 @@ CTI_URLS: Dict[str, str] = {
     "ics": "https://raw.githubusercontent.com/mitre/cti/master/ics-attack/ics-attack.json",
 }
 
+KILL_CHAIN_BY_DOMAIN: Dict[str, List[str]] = {
+    "enterprise": ["mitre-attack"],
+    "mobile": ["mitre-mobile-attack"],
+    "ics": ["mitre-ics-attack"],
+}
+
 
 def _utc_now_iso() -> str:
     return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -245,11 +251,12 @@ def _parse_subtechnique_rels(objects: Iterable[Dict[str, Any]]) -> Dict[str, str
     return sub_to_parent
 
 
-def _kill_chain_phases(obj: Dict[str, Any]) -> List[str]:
+def _kill_chain_phases(obj: Dict[str, Any], kill_chain_names: Iterable[str]) -> List[str]:
+    allowed = set(kill_chain_names)
     phases = obj.get("kill_chain_phases") or []
     out: List[str] = []
     for ph in phases:
-        if ph.get("kill_chain_name") != "mitre-attack":
+        if ph.get("kill_chain_name") not in allowed:
             continue
         phase_name = (ph.get("phase_name") or "").strip()
         if phase_name:
@@ -262,6 +269,7 @@ def _parse_techniques(
     tactic_shortname_to_id: Dict[str, str],
     stix_id_to_external_id: Dict[str, str],
     sub_to_parent_stix: Dict[str, str],
+    kill_chain_names: Iterable[str],
 ) -> List[Technique]:
     techniques: List[Technique] = []
     for obj in objects:
@@ -283,7 +291,7 @@ def _parse_techniques(
             if parent_stix:
                 parent_id = stix_id_to_external_id.get(parent_stix)
 
-        phase_shortnames = _kill_chain_phases(obj)
+        phase_shortnames = _kill_chain_phases(obj, kill_chain_names)
         tactic_ids = []
         for sn in phase_shortnames:
             tid = tactic_shortname_to_id.get(sn)
@@ -420,11 +428,13 @@ def _build_output(domain: str, stix: Dict[str, Any], source_url: str) -> Dict[st
     groups = _parse_groups(objects)
     software = _parse_software(objects)
     mitigations = _parse_mitigations(objects)
+    kill_chain_names = KILL_CHAIN_BY_DOMAIN.get(domain, ["mitre-attack"])
     techniques = _parse_techniques(
         objects=objects,
         tactic_shortname_to_id=tactic_shortname_to_id,
         stix_id_to_external_id=stix_id_to_external_id,
         sub_to_parent_stix=sub_to_parent_stix,
+        kill_chain_names=kill_chain_names,
     )
     matrix, subtechniques = _build_matrix(tactics, techniques)
     links = _parse_links(objects, stix_id_to_external_id)

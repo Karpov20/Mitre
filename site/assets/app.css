@@ -289,6 +289,12 @@ a {
   font-size: 13px;
 }
 
+.techitem--sub {
+  margin-left: 12px;
+  border-style: dashed;
+  opacity: 0.9;
+}
+
 .section {
   margin-top: 14px;
 }
@@ -296,6 +302,65 @@ a {
 .section__title {
   font-weight: 750;
   margin-bottom: 8px;
+}
+
+.navigator {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+}
+
+.navigator-page {
+  display: grid;
+  gap: 14px;
+}
+
+.navigator-hero {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  background: radial-gradient(120% 140% at 10% 0%, rgba(124, 58, 237, 0.18), transparent 55%),
+    radial-gradient(120% 160% at 90% 0%, rgba(34, 197, 94, 0.12), transparent 55%),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.navigator-hero__title {
+  font-weight: 760;
+  font-size: 18px;
+}
+
+.navigator-hero__subtitle {
+  margin-top: 4px;
+}
+
+.navigator__title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.navigator__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.navigator-embed {
+  display: grid;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 0;
+  overflow: hidden;
+}
+
+.navigator-frame {
+  width: 100%;
+  min-height: 85vh;
+  border: 0;
+  background: transparent;
 }
 
 .kv {

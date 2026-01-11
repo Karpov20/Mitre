@@ -4,14 +4,16 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import re
 import sys
+import time
 import warnings
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 
 SUPPORTED_DOMAINS = ("enterprise", "mobile", "ics")
-
+MAX_CHARS = 4500
 
 # Silence macOS LibreSSL warning from urllib3 (doesn't affect our use-case).
 warnings.filterwarnings("ignore", message=r"urllib3 v2 only supports OpenSSL.*")
@@ -43,57 +45,95 @@ def _domains_from_arg(arg: str) -> List[str]:
     return [arg]
 
 
-def _ensure_argos_en_ru() -> Any:
+def _build_translator() -> Any:
     try:
-        from argostranslate import package, translate  # type: ignore
+        from deep_translator import GoogleTranslator  # type: ignore
     except Exception as e:  # pragma: no cover
         raise RuntimeError(
-            "Не найден пакет argostranslate. Установите: python3 -m pip install argostranslate"
+            "Не найден пакет deep-translator. Установите: python3 -m pip install deep-translator"
         ) from e
+    return GoogleTranslator(source="en", target="ru")
 
-    installed = translate.get_installed_languages()
-    by_code = {l.code: l for l in installed}
-    from_lang = by_code.get("en")
-    to_lang = by_code.get("ru")
-    if from_lang and to_lang:
+
+def _sleep(seconds: float) -> None:
+    if seconds > 0:
+        time.sleep(seconds)
+
+
+def _translate_chunk(tr: Any, text: str, sleep_sec: float) -> str:
+    for attempt in range(3):
         try:
-            maybe_tr = from_lang.get_translation(to_lang)
-            if maybe_tr:
-                return translate
+            out = tr.translate(text)
+            _sleep(sleep_sec)
+            return out
         except Exception:
-            pass
-
-    print("[translate] installing Argos model en->ru (one-time download)...")
-    package.update_package_index()
-    available = package.get_available_packages()
-    pkg = next((p for p in available if p.from_code == "en" and p.to_code == "ru"), None)
-    if not pkg:
-        raise RuntimeError("Не удалось найти модель Argos Translate для en->ru.")
-    download_path = pkg.download()
-    package.install_from_path(download_path)
-    return translate
+            if attempt == 2:
+                raise
+            _sleep(1.5 + attempt)
 
 
-def _build_translator() -> Any:
-    translate = _ensure_argos_en_ru()
-    langs = translate.get_installed_languages()
-    from_lang = next(l for l in langs if l.code == "en")
-    to_lang = next(l for l in langs if l.code == "ru")
-    return from_lang.get_translation(to_lang)
+def _split_long_line(line: str) -> List[str]:
+    if len(line) <= MAX_CHARS:
+        return [line]
+    sentences = re.split(r"(?<=[.!?])\\s+", line)
+    chunks: List[str] = []
+    current = ""
+    for s in sentences:
+        if not s:
+            continue
+        if len(s) > MAX_CHARS:
+            if current:
+                chunks.append(current)
+                current = ""
+            for i in range(0, len(s), MAX_CHARS):
+                chunks.append(s[i : i + MAX_CHARS])
+            continue
+        if len(current) + len(s) + 1 > MAX_CHARS:
+            if current:
+                chunks.append(current)
+            current = s
+        else:
+            current = f"{current} {s}".strip()
+    if current:
+        chunks.append(current)
+    return chunks
 
 
-def _translate_text(tr: Any, text: str) -> str:
+def _translate_text(tr: Any, text: str, sleep_sec: float) -> str:
     text = (text or "").strip()
     if not text:
         return ""
-    return tr.translate(text)
+    paragraphs = text.split("\n\n")
+    out_paragraphs: List[str] = []
+    for para in paragraphs:
+        if not para.strip():
+            out_paragraphs.append("")
+            continue
+        if len(para) <= MAX_CHARS:
+            out_paragraphs.append(_translate_chunk(tr, para, sleep_sec))
+            continue
+        if "\n" in para:
+            lines = para.split("\n")
+            translated_lines = []
+            for line in lines:
+                if not line.strip():
+                    translated_lines.append("")
+                    continue
+                line_chunks = _split_long_line(line)
+                translated_line = " ".join(_translate_chunk(tr, c, sleep_sec) for c in line_chunks)
+                translated_lines.append(translated_line)
+            out_paragraphs.append("\n".join(translated_lines))
+        else:
+            line_chunks = _split_long_line(para)
+            out_paragraphs.append(" ".join(_translate_chunk(tr, c, sleep_sec) for c in line_chunks))
+    return "\n\n".join(out_paragraphs)
 
 
-def _maybe_translate(tr: Any, text: str) -> Optional[str]:
+def _maybe_translate(tr: Any, text: str, sleep_sec: float) -> Optional[str]:
     txt = (text or "").strip()
     if not txt:
         return None
-    return tr.translate(txt)
+    return _translate_text(tr, txt, sleep_sec)
 
 
 def _init_or_resume_patch(existing: Optional[Dict[str, Any]], domain: str) -> Dict[str, Any]:
@@ -107,7 +147,7 @@ def _init_or_resume_patch(existing: Optional[Dict[str, Any]], domain: str) -> Di
         "language": "ru",
         "domain": domain,
         "generated_at": _utc_now_iso(),
-        "generator": "argostranslate en->ru",
+        "generator": "google translate (deep-translator)",
         "note": "Это неофициальный машинный перевод. Возможны неточности.",
     }
     return patch
@@ -122,6 +162,7 @@ def _build_ru_patch(
     max_items: Optional[int],
     save_every: int,
     out_path: Path,
+    sleep_sec: float,
 ) -> Dict[str, Any]:
     tactics = base.get("tactics") or []
     techniques = base.get("techniques") or []
@@ -143,8 +184,8 @@ def _build_ru_patch(
             continue
 
         patch["tactics"][tid] = {
-            "name": _translate_text(tr, t.get("name") or ""),
-            "description": _translate_text(tr, t.get("description") or ""),
+            "name": _translate_text(tr, t.get("name") or "", sleep_sec),
+            "description": _translate_text(tr, t.get("description") or "", sleep_sec),
         }
 
         translated_objects += 1
@@ -164,13 +205,13 @@ def _build_ru_patch(
 
         changed = False
         if not isinstance(existing_tech.get("name"), str) or not existing_tech.get("name"):
-            existing_tech["name"] = _translate_text(tr, tech.get("name") or "")
+            existing_tech["name"] = _translate_text(tr, tech.get("name") or "", sleep_sec)
             changed = True
         if not isinstance(existing_tech.get("description"), str) or not existing_tech.get("description"):
-            existing_tech["description"] = _translate_text(tr, tech.get("description") or "")
+            existing_tech["description"] = _translate_text(tr, tech.get("description") or "", sleep_sec)
             changed = True
         if "detection" not in existing_tech:
-            det = _maybe_translate(tr, tech.get("detection") or "")
+            det = _maybe_translate(tr, tech.get("detection") or "", sleep_sec)
             if det:
                 existing_tech["detection"] = det
                 changed = True
@@ -193,8 +234,8 @@ def _build_ru_patch(
         ):
             continue
         patch["groups"][gid] = {
-            "name": _translate_text(tr, g.get("name") or ""),
-            "description": _translate_text(tr, g.get("description") or ""),
+            "name": _translate_text(tr, g.get("name") or "", sleep_sec),
+            "description": _translate_text(tr, g.get("description") or "", sleep_sec),
         }
         translated_objects += 1
         if save_every and translated_objects % save_every == 0:
@@ -212,8 +253,8 @@ def _build_ru_patch(
         ):
             continue
         patch["software"][sid] = {
-            "name": _translate_text(tr, sw.get("name") or ""),
-            "description": _translate_text(tr, sw.get("description") or ""),
+            "name": _translate_text(tr, sw.get("name") or "", sleep_sec),
+            "description": _translate_text(tr, sw.get("description") or "", sleep_sec),
         }
         translated_objects += 1
         if save_every and translated_objects % save_every == 0:
@@ -231,8 +272,8 @@ def _build_ru_patch(
         ):
             continue
         patch["mitigations"][mid] = {
-            "name": _translate_text(tr, m.get("name") or ""),
-            "description": _translate_text(tr, m.get("description") or ""),
+            "name": _translate_text(tr, m.get("name") or "", sleep_sec),
+            "description": _translate_text(tr, m.get("description") or "", sleep_sec),
         }
         translated_objects += 1
         if save_every and translated_objects % save_every == 0:
@@ -259,6 +300,12 @@ def main(argv: List[str]) -> int:
         type=int,
         default=25,
         help="Write output patch file every N translated objects (default: 25)",
+    )
+    parser.add_argument(
+        "--sleep",
+        type=float,
+        default=0.0,
+        help="Delay between translation requests in seconds (default: 0)",
     )
     parser.add_argument(
         "--max-items",
@@ -288,6 +335,7 @@ def main(argv: List[str]) -> int:
             max_items=args.max_items,
             save_every=args.save_every,
             out_path=out_path,
+            sleep_sec=args.sleep,
         )
         _write_json(out_path, patch)
         print(f"[{domain}] wrote {out_path}")

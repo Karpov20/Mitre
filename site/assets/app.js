@@ -9,6 +9,15 @@ const DOMAINS = [
   { id: "ics", label: "ICS" },
 ];
 
+const NAVIGATOR_URL = "navigator/index.html";
+const NAVIGATOR_ROUTE = "#/navigator";
+const NAVIGATOR_DOMAIN = {
+  enterprise: "enterprise-attack",
+  mobile: "mobile-attack",
+  ics: "ics-attack",
+};
+const NAVIGATOR_ATTACK_VERSION = "14";
+
 const I18N = {
   ru: {
     nav: {
@@ -17,6 +26,7 @@ const I18N = {
       groups: "Группы",
       software: "ПО",
       mitigations: "Митигации",
+      navigator: "Навигатор",
       about: "О проекте",
     },
     matrixTitle: "Матрица техник",
@@ -28,6 +38,11 @@ const I18N = {
     searchPlaceholder: "Поиск: T1059, G0010, S0001, M1040…",
     searchTitle: "Результаты поиска",
     searchEmpty: "Ничего не найдено.",
+    navigatorTitle: "ATT&CK Навигатор",
+    navigatorBody: "Скачайте слой или откройте встроенный ATT&CK Навигатор.",
+    navigatorDownload: "Скачать слой",
+    navigatorOpen: "Открыть на сайте",
+    navigatorEmpty: "Нет техник для слоя.",
     aboutTitle: "О проекте",
     aboutBody:
       "Это статический сайт, который отображает MITRE ATT&CK (Enterprise/Mobile/ICS) и поддерживает русскую локализацию. Сайт не является официальным продуктом MITRE.",
@@ -70,6 +85,7 @@ const I18N = {
       groups: "Groups",
       software: "Software",
       mitigations: "Mitigations",
+      navigator: "Navigator",
       about: "About",
     },
     matrixTitle: "Techniques matrix",
@@ -81,6 +97,11 @@ const I18N = {
     searchPlaceholder: "Search: T1059, G0010, S0001, M1040…",
     searchTitle: "Search results",
     searchEmpty: "No results.",
+    navigatorTitle: "ATT&CK Navigator",
+    navigatorBody: "Download the layer or open the built-in ATT&CK Navigator.",
+    navigatorDownload: "Download layer",
+    navigatorOpen: "Open here",
+    navigatorEmpty: "No techniques for the layer.",
     aboutTitle: "About",
     aboutBody:
       "A static site that renders MITRE ATT&CK (Enterprise/Mobile/ICS) and supports Russian localization. Not affiliated with MITRE.",
@@ -124,6 +145,7 @@ const dom = {
   navGroups: document.getElementById("navGroups"),
   navSoftware: document.getElementById("navSoftware"),
   navMitigations: document.getElementById("navMitigations"),
+  navNavigator: document.getElementById("navNavigator"),
   navAbout: document.getElementById("navAbout"),
   domainSelect: document.getElementById("domainSelect"),
   langToggle: document.getElementById("langToggle"),
@@ -265,6 +287,59 @@ function gridHtml(itemsHtml, { limit, total }) {
   return `<div class="grid">${list.join("")}</div>${more}`;
 }
 
+function uniqueSortedIds(ids) {
+  return [...new Set((ids || []).filter(Boolean))].sort();
+}
+
+function buildNavigatorLayer({ name, description, domain, techniqueIds }) {
+  const techniques = uniqueSortedIds(techniqueIds).map((id) => ({ techniqueID: id, score: 1 }));
+  const layer = {
+    versions: { attack: NAVIGATOR_ATTACK_VERSION, navigator: "5.2.0", layer: "4.5" },
+    name,
+    domain: NAVIGATOR_DOMAIN[domain] || NAVIGATOR_DOMAIN.enterprise,
+    description,
+    techniques,
+    sorting: 0,
+    layout: { layout: "side", aggregateFunction: "average", showID: true, showName: true },
+    hideDisabled: false,
+  };
+  if (!techniques.length) delete layer.techniques;
+  return layer;
+}
+
+function navigatorBlockHtml({ title, description, domain, techniqueIds }) {
+  const s = I18N[state.lang] || I18N.ru;
+  const navBase = new URL(NAVIGATOR_URL, window.location.href);
+  const layerAbsUrl = new URL(`layers/${domain}.json`, navBase).href;
+  const ids = uniqueSortedIds(techniqueIds);
+  if (!ids.length) {
+    return `<div class="navigator">
+      <div class="navigator__title">${escapeHtml(s.navigatorTitle)}</div>
+      <div class="muted">${escapeHtml(s.navigatorEmpty)}</div>
+    </div>`;
+  }
+
+  const layer = buildNavigatorLayer({
+    name: title,
+    description,
+    domain,
+    techniqueIds: ids,
+  });
+  const json = JSON.stringify(layer, null, 2);
+  const dataUrl = `data:application/json;charset=utf-8,${encodeURIComponent(json)}`;
+  const fileName = `attack-layer-${domain}.json`;
+  const openHref = `${NAVIGATOR_ROUTE}?layer=${encodeURIComponent(layerAbsUrl)}`;
+
+  return `<div class="navigator">
+    <div class="navigator__title">${escapeHtml(s.navigatorTitle)}</div>
+    <div class="muted">${escapeHtml(s.navigatorBody)}</div>
+    <div class="navigator__actions">
+      <a class="btn" href="${dataUrl}" download="${escapeHtml(fileName)}">${escapeHtml(s.navigatorDownload)}</a>
+      <a class="link" href="${openHref}">${escapeHtml(s.navigatorOpen)}</a>
+    </div>
+  </div>`;
+}
+
 async function fetchJson(path) {
   const res = await fetch(path, { cache: "no-cache" });
   if (!res.ok) {
@@ -346,6 +421,7 @@ function syncUiStrings() {
   if (dom.navGroups) dom.navGroups.textContent = s.nav.groups;
   if (dom.navSoftware) dom.navSoftware.textContent = s.nav.software;
   if (dom.navMitigations) dom.navMitigations.textContent = s.nav.mitigations;
+  if (dom.navNavigator) dom.navNavigator.textContent = s.nav.navigator;
   if (dom.navAbout) dom.navAbout.textContent = s.nav.about;
   if (dom.searchInput) dom.searchInput.placeholder = s.searchPlaceholder;
 }
@@ -380,7 +456,7 @@ function renderAbout() {
     </div>
     <div class="section">
       <div class="section__title">Перевод</div>
-      <div class="muted">Русские строки — машинный перевод (Argos Translate). Генерация: <span class="mono">python3 scripts/translate_attack_ru.py --domain all</span>.</div>
+      <div class="muted">Русские строки — машинный перевод (Google Translate). Генерация: <span class="mono">python3 scripts/translate_attack_ru.py --domain all</span>.</div>
     </div>
   `;
   const detailsEn = `
@@ -390,7 +466,7 @@ function renderAbout() {
     </div>
     <div class="section">
       <div class="section__title">Translation</div>
-      <div class="muted">Russian strings are machine-translated (Argos Translate). Generate: <span class="mono">python3 scripts/translate_attack_ru.py --domain all</span>.</div>
+      <div class="muted">Russian strings are machine-translated (Google Translate). Generate: <span class="mono">python3 scripts/translate_attack_ru.py --domain all</span>.</div>
     </div>
   `;
   setMain(
@@ -421,6 +497,13 @@ function renderMatrix(vm) {
   const container = document.createElement("div");
   container.className = "grid";
 
+  const matrixNavigatorHtml = navigatorBlockHtml({
+    title: `${s.matrixTitle} (${state.domain})`,
+    description: s.matrixTitle,
+    domain: state.domain,
+    techniqueIds: (vm.base.techniques || []).map((t) => t.id),
+  });
+
   container.appendChild(
     card({
       title: s.matrixTitle,
@@ -428,7 +511,8 @@ function renderMatrix(vm) {
       right,
       bodyHtml: `<div class="muted">Данные: <a class="link" href="${escapeHtml(
         vm.base.meta?.source_url || "#"
-      )}" target="_blank" rel="noreferrer">${escapeHtml(vm.base.meta?.source_url || "")}</a></div>`,
+      )}" target="_blank" rel="noreferrer">${escapeHtml(vm.base.meta?.source_url || "")}</a></div>
+      <div class="section">${matrixNavigatorHtml}</div>`,
     })
   );
 
@@ -475,19 +559,20 @@ function renderMatrix(vm) {
     const list = document.createElement("ol");
     list.className = "techlist";
     const techIds = (vm.base.matrix || {})[tactic.id] || [];
+    const subMap = vm.base.subtechniques || {};
 
-    for (const tid of techIds) {
-      const tech = vm.techniquesById.get(tid);
-      if (!tech) continue;
+    const addItem = (techId, isSub = false) => {
+      const tech = vm.techniquesById.get(techId);
+      if (!tech) return;
       const li = document.createElement("li");
       const a = document.createElement("a");
-      a.className = "techitem";
-      a.href = `#/technique/${encodeURIComponent(tid)}`;
+      a.className = isSub ? "techitem techitem--sub" : "techitem";
+      a.href = `#/technique/${encodeURIComponent(techId)}`;
 
       const idEl = document.createElement("div");
       idEl.className = "techitem__id";
-      idEl.textContent = tid;
-      const name = localizedField(vm.patchRu?.techniques, tid, "name", tech.name);
+      idEl.textContent = techId;
+      const name = localizedField(vm.patchRu?.techniques, techId, "name", tech.name);
       const nameEl2 = document.createElement("div");
       nameEl2.className = "techitem__name";
       nameEl2.textContent = name;
@@ -496,6 +581,12 @@ function renderMatrix(vm) {
       a.appendChild(nameEl2);
       li.appendChild(a);
       list.appendChild(li);
+    };
+
+    for (const tid of techIds) {
+      addItem(tid, false);
+      const subIds = subMap[tid] || [];
+      for (const sid of subIds) addItem(sid, true);
     }
 
     col.appendChild(list);
@@ -597,6 +688,13 @@ function renderTechnique(vm, techniqueId) {
     { limit: 200, total: mitigationIds.length }
   );
 
+  const navigatorHtml = navigatorBlockHtml({
+    title: `${techniqueId} ${name}`,
+    description: name,
+    domain: state.domain,
+    techniqueIds: [techniqueId],
+  });
+
   const subInfo =
     tech.is_subtechnique && tech.parent_id
       ? state.lang === "ru"
@@ -650,6 +748,10 @@ function renderTechnique(vm, techniqueId) {
             <div class="section__title">${escapeHtml(t("fields").relatedMitigations)}</div>
             ${mitigationsHtml}
           </div>
+        </div>
+
+        <div class="section">
+          ${navigatorHtml}
         </div>
       `,
     })
@@ -786,6 +888,13 @@ function renderGroup(vm, groupId) {
     { limit: 200, total: softwareIds.length }
   );
 
+  const navigatorHtml = navigatorBlockHtml({
+    title: `${groupId} ${name}`,
+    description: name,
+    domain: state.domain,
+    techniqueIds,
+  });
+
   setMain(
     card({
       title: name,
@@ -813,6 +922,10 @@ function renderGroup(vm, groupId) {
         <div class="section">
           <div class="section__title">${escapeHtml(t("fields").usesSoftware)}</div>
           ${softwareHtml}
+        </div>
+
+        <div class="section">
+          ${navigatorHtml}
         </div>
       `,
     })
@@ -868,6 +981,13 @@ function renderSoftware(vm, softwareId) {
     { limit: 200, total: groupIds.length }
   );
 
+  const navigatorHtml = navigatorBlockHtml({
+    title: `${softwareId} ${name}`,
+    description: name,
+    domain: state.domain,
+    techniqueIds,
+  });
+
   setMain(
     card({
       title: name,
@@ -901,6 +1021,10 @@ function renderSoftware(vm, softwareId) {
         <div class="section">
           <div class="section__title">${escapeHtml(t("fields").usedByGroups)}</div>
           ${groupsHtml}
+        </div>
+
+        <div class="section">
+          ${navigatorHtml}
         </div>
       `,
     })
@@ -941,6 +1065,13 @@ function renderMitigation(vm, mitigationId) {
     { limit: 200, total: techniqueIds.length }
   );
 
+  const navigatorHtml = navigatorBlockHtml({
+    title: `${mitigationId} ${name}`,
+    description: name,
+    domain: state.domain,
+    techniqueIds,
+  });
+
   setMain(
     card({
       title: name,
@@ -961,9 +1092,51 @@ function renderMitigation(vm, mitigationId) {
           <div class="section__title">${escapeHtml(t("fields").mitigatesTechniques)}</div>
           ${techniquesHtml}
         </div>
+
+        <div class="section">
+          ${navigatorHtml}
+        </div>
       `,
     })
   );
+}
+
+function renderNavigator(vm) {
+  const s = I18N[state.lang] || I18N.ru;
+  const route = parseHash();
+  const navBase = new URL(NAVIGATOR_URL, window.location.href);
+  const layerAbsUrlDefault = new URL(`layers/${state.domain}.json`, navBase).href;
+  const defaultLayer = buildNavigatorLayer({
+    name: `${s.matrixTitle} (${state.domain})`,
+    description: s.navigatorBody,
+    domain: state.domain,
+    techniqueIds: (vm.base.techniques || []).map((t) => t.id),
+  });
+  const defaultLayerUrl = layerAbsUrlDefault;
+  const layerParam = route.params.get("layer");
+  let layerUrl = defaultLayerUrl;
+  if (layerParam) {
+    try {
+      layerUrl = decodeURIComponent(layerParam);
+    } catch (_) {
+      layerUrl = layerParam;
+    }
+  }
+  const navUrl = `${NAVIGATOR_URL}?domain=${encodeURIComponent(state.domain)}&lang=${encodeURIComponent(
+    state.lang
+  )}#layerURL=${encodeURIComponent(layerUrl)}`;
+  const wrap = document.createElement("section");
+  wrap.className = "navigator-page";
+  wrap.innerHTML = `
+    <div class="navigator-hero">
+      <div class="navigator-hero__title">${escapeHtml(s.navigatorTitle)}</div>
+      <div class="navigator-hero__subtitle muted">${escapeHtml(s.navigatorBody)}</div>
+    </div>
+    <div class="navigator-embed">
+      <iframe class="navigator-frame" src="${navUrl}" title="${escapeHtml(s.navigatorTitle)}"></iframe>
+    </div>
+  `;
+  setMain(wrap);
 }
 
 function renderSearch(vm, query) {
@@ -1072,6 +1245,11 @@ async function renderRoute() {
   const route = parseHash();
   if (route.path === "/about") {
     renderAbout();
+    return;
+  }
+
+  if (route.path === "/navigator") {
+    renderNavigator(vm);
     return;
   }
 

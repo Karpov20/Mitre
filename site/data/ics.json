@@ -1,7 +1,7 @@
 {
   "meta": {
     "domain": "ics",
-    "generated_at": "2025-12-18T12:44:06+00:00",
+    "generated_at": "2026-01-10T20:47:09+00:00",
     "source_url": "https://raw.githubusercontent.com/mitre/cti/master/ics-attack/ics-attack.json",
     "stix_spec_version": "2.0"
   },
@@ -124,7 +124,9 @@
       "url": "https://attack.mitre.org/techniques/T0800",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -138,7 +140,9 @@
       "url": "https://attack.mitre.org/techniques/T0801",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -152,7 +156,9 @@
       "url": "https://attack.mitre.org/techniques/T0802",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -166,7 +172,9 @@
       "url": "https://attack.mitre.org/techniques/T0803",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -180,7 +188,9 @@
       "url": "https://attack.mitre.org/techniques/T0804",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -194,7 +204,9 @@
       "url": "https://attack.mitre.org/techniques/T0805",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -208,7 +220,9 @@
       "url": "https://attack.mitre.org/techniques/T0806",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0106"
+      ],
       "platforms": [
         "None"
       ],
@@ -222,7 +236,9 @@
       "url": "https://attack.mitre.org/techniques/T0807",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104"
+      ],
       "platforms": [
         "None"
       ],
@@ -236,7 +252,9 @@
       "url": "https://attack.mitre.org/techniques/T0809",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -250,7 +268,9 @@
       "url": "https://attack.mitre.org/techniques/T0811",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -264,7 +284,9 @@
       "url": "https://attack.mitre.org/techniques/T0812",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0109"
+      ],
       "platforms": [
         "None"
       ],
@@ -278,7 +300,9 @@
       "url": "https://attack.mitre.org/techniques/T0813",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -292,7 +316,9 @@
       "url": "https://attack.mitre.org/techniques/T0814",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -306,7 +332,9 @@
       "url": "https://attack.mitre.org/techniques/T0815",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -320,7 +348,9 @@
       "url": "https://attack.mitre.org/techniques/T0816",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -334,7 +364,9 @@
       "url": "https://attack.mitre.org/techniques/T0817",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -348,7 +380,9 @@
       "url": "https://attack.mitre.org/techniques/T0819",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -362,7 +396,9 @@
       "url": "https://attack.mitre.org/techniques/T0820",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0103"
+      ],
       "platforms": [
         "None"
       ],
@@ -376,7 +412,9 @@
       "url": "https://attack.mitre.org/techniques/T0821",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104"
+      ],
       "platforms": [
         "None"
       ],
@@ -390,7 +428,9 @@
       "url": "https://attack.mitre.org/techniques/T0822",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -404,7 +444,9 @@
       "url": "https://attack.mitre.org/techniques/T0823",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104"
+      ],
       "platforms": [
         "None"
       ],
@@ -418,7 +460,9 @@
       "url": "https://attack.mitre.org/techniques/T0826",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -432,7 +476,9 @@
       "url": "https://attack.mitre.org/techniques/T0827",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -446,7 +492,9 @@
       "url": "https://attack.mitre.org/techniques/T0828",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -460,7 +508,9 @@
       "url": "https://attack.mitre.org/techniques/T0829",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -474,7 +524,9 @@
       "url": "https://attack.mitre.org/techniques/T0830",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -488,7 +540,9 @@
       "url": "https://attack.mitre.org/techniques/T0831",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -502,7 +556,9 @@
       "url": "https://attack.mitre.org/techniques/T0832",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -516,7 +572,9 @@
       "url": "https://attack.mitre.org/techniques/T0834",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104"
+      ],
       "platforms": [
         "None"
       ],
@@ -530,7 +588,9 @@
       "url": "https://attack.mitre.org/techniques/T0835",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -544,7 +604,9 @@
       "url": "https://attack.mitre.org/techniques/T0836",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0106"
+      ],
       "platforms": [
         "None"
       ],
@@ -558,7 +620,9 @@
       "url": "https://attack.mitre.org/techniques/T0837",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -572,7 +636,9 @@
       "url": "https://attack.mitre.org/techniques/T0838",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -586,7 +652,10 @@
       "url": "https://attack.mitre.org/techniques/T0839",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0110",
+        "TA0106"
+      ],
       "platforms": [
         "None"
       ],
@@ -600,7 +669,9 @@
       "url": "https://attack.mitre.org/techniques/T0840",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0102"
+      ],
       "platforms": [
         "None"
       ],
@@ -614,7 +685,9 @@
       "url": "https://attack.mitre.org/techniques/T0842",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0102"
+      ],
       "platforms": [
         "None"
       ],
@@ -628,7 +701,9 @@
       "url": "https://attack.mitre.org/techniques/T0843",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0109"
+      ],
       "platforms": [
         "None"
       ],
@@ -642,7 +717,9 @@
       "url": "https://attack.mitre.org/techniques/T0845",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -656,7 +733,9 @@
       "url": "https://attack.mitre.org/techniques/T0846",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0102"
+      ],
       "platforms": [
         "None"
       ],
@@ -670,7 +749,9 @@
       "url": "https://attack.mitre.org/techniques/T0847",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -684,7 +765,9 @@
       "url": "https://attack.mitre.org/techniques/T0848",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -698,7 +781,9 @@
       "url": "https://attack.mitre.org/techniques/T0849",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0103"
+      ],
       "platforms": [
         "None"
       ],
@@ -712,7 +797,10 @@
       "url": "https://attack.mitre.org/techniques/T0851",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0103",
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -726,7 +814,9 @@
       "url": "https://attack.mitre.org/techniques/T0852",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -740,7 +830,9 @@
       "url": "https://attack.mitre.org/techniques/T0853",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104"
+      ],
       "platforms": [
         "None"
       ],
@@ -754,7 +846,9 @@
       "url": "https://attack.mitre.org/techniques/T0855",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0106"
+      ],
       "platforms": [
         "None"
       ],
@@ -768,7 +862,10 @@
       "url": "https://attack.mitre.org/techniques/T0856",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0103",
+        "TA0106"
+      ],
       "platforms": [
         "None"
       ],
@@ -782,7 +879,10 @@
       "url": "https://attack.mitre.org/techniques/T0857",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0110",
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -796,7 +896,10 @@
       "url": "https://attack.mitre.org/techniques/T0858",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104",
+        "TA0103"
+      ],
       "platforms": [
         "None"
       ],
@@ -810,7 +913,10 @@
       "url": "https://attack.mitre.org/techniques/T0859",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0110",
+        "TA0109"
+      ],
       "platforms": [
         "None"
       ],
@@ -824,7 +930,9 @@
       "url": "https://attack.mitre.org/techniques/T0860",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -838,7 +946,9 @@
       "url": "https://attack.mitre.org/techniques/T0861",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -852,7 +962,9 @@
       "url": "https://attack.mitre.org/techniques/T0862",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -866,7 +978,9 @@
       "url": "https://attack.mitre.org/techniques/T0863",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104"
+      ],
       "platforms": [
         "None"
       ],
@@ -880,7 +994,9 @@
       "url": "https://attack.mitre.org/techniques/T0864",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -894,7 +1010,9 @@
       "url": "https://attack.mitre.org/techniques/T0865",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -908,7 +1026,10 @@
       "url": "https://attack.mitre.org/techniques/T0866",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108",
+        "TA0109"
+      ],
       "platforms": [
         "None"
       ],
@@ -922,7 +1043,9 @@
       "url": "https://attack.mitre.org/techniques/T0867",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0109"
+      ],
       "platforms": [
         "None"
       ],
@@ -936,7 +1059,9 @@
       "url": "https://attack.mitre.org/techniques/T0868",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -950,7 +1075,9 @@
       "url": "https://attack.mitre.org/techniques/T0869",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0101"
+      ],
       "platforms": [
         "None"
       ],
@@ -964,7 +1091,9 @@
       "url": "https://attack.mitre.org/techniques/T0871",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104"
+      ],
       "platforms": [
         "None"
       ],
@@ -978,7 +1107,9 @@
       "url": "https://attack.mitre.org/techniques/T0872",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0103"
+      ],
       "platforms": [
         "None"
       ],
@@ -992,7 +1123,9 @@
       "url": "https://attack.mitre.org/techniques/T0873",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0110"
+      ],
       "platforms": [
         "None"
       ],
@@ -1006,7 +1139,10 @@
       "url": "https://attack.mitre.org/techniques/T0874",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104",
+        "TA0111"
+      ],
       "platforms": [
         "None"
       ],
@@ -1020,7 +1156,9 @@
       "url": "https://attack.mitre.org/techniques/T0877",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -1034,7 +1172,9 @@
       "url": "https://attack.mitre.org/techniques/T0878",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -1048,7 +1188,9 @@
       "url": "https://attack.mitre.org/techniques/T0879",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -1062,7 +1204,9 @@
       "url": "https://attack.mitre.org/techniques/T0880",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -1076,7 +1220,9 @@
       "url": "https://attack.mitre.org/techniques/T0881",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -1090,7 +1236,9 @@
       "url": "https://attack.mitre.org/techniques/T0882",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0105"
+      ],
       "platforms": [
         "None"
       ],
@@ -1104,7 +1252,9 @@
       "url": "https://attack.mitre.org/techniques/T0883",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108"
+      ],
       "platforms": [
         "None"
       ],
@@ -1118,7 +1268,9 @@
       "url": "https://attack.mitre.org/techniques/T0884",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0101"
+      ],
       "platforms": [
         "None"
       ],
@@ -1132,7 +1284,9 @@
       "url": "https://attack.mitre.org/techniques/T0885",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0101"
+      ],
       "platforms": [
         "None"
       ],
@@ -1146,7 +1300,10 @@
       "url": "https://attack.mitre.org/techniques/T0886",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0108",
+        "TA0109"
+      ],
       "platforms": [
         "None"
       ],
@@ -1160,7 +1317,10 @@
       "url": "https://attack.mitre.org/techniques/T0887",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0102",
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -1174,7 +1334,9 @@
       "url": "https://attack.mitre.org/techniques/T0888",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0102"
+      ],
       "platforms": [
         "None"
       ],
@@ -1188,7 +1350,9 @@
       "url": "https://attack.mitre.org/techniques/T0889",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0110"
+      ],
       "platforms": [
         "None"
       ],
@@ -1202,7 +1366,9 @@
       "url": "https://attack.mitre.org/techniques/T0890",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0111"
+      ],
       "platforms": [
         "None"
       ],
@@ -1216,7 +1382,10 @@
       "url": "https://attack.mitre.org/techniques/T0891",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0109",
+        "TA0110"
+      ],
       "platforms": [
         "None"
       ],
@@ -1230,7 +1399,9 @@
       "url": "https://attack.mitre.org/techniques/T0892",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0107"
+      ],
       "platforms": [
         "None"
       ],
@@ -1244,7 +1415,9 @@
       "url": "https://attack.mitre.org/techniques/T0893",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0100"
+      ],
       "platforms": [
         "None"
       ],
@@ -1258,7 +1431,9 @@
       "url": "https://attack.mitre.org/techniques/T0894",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0103"
+      ],
       "platforms": [
         "None"
       ],
@@ -1272,24 +1447,132 @@
       "url": "https://attack.mitre.org/techniques/T0895",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0104"
+      ],
       "platforms": [],
       "detection": ""
     }
   ],
   "matrix": {
-    "TA0100": [],
-    "TA0101": [],
-    "TA0102": [],
-    "TA0103": [],
-    "TA0104": [],
-    "TA0105": [],
-    "TA0106": [],
-    "TA0107": [],
-    "TA0108": [],
-    "TA0109": [],
-    "TA0110": [],
-    "TA0111": []
+    "TA0100": [
+      "T0801",
+      "T0802",
+      "T0811",
+      "T0830",
+      "T0845",
+      "T0852",
+      "T0861",
+      "T0868",
+      "T0877",
+      "T0887",
+      "T0893"
+    ],
+    "TA0101": [
+      "T0869",
+      "T0884",
+      "T0885"
+    ],
+    "TA0102": [
+      "T0840",
+      "T0842",
+      "T0846",
+      "T0887",
+      "T0888"
+    ],
+    "TA0103": [
+      "T0820",
+      "T0849",
+      "T0851",
+      "T0856",
+      "T0858",
+      "T0872",
+      "T0894"
+    ],
+    "TA0104": [
+      "T0807",
+      "T0821",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0858",
+      "T0863",
+      "T0871",
+      "T0874",
+      "T0895"
+    ],
+    "TA0105": [
+      "T0813",
+      "T0815",
+      "T0826",
+      "T0827",
+      "T0828",
+      "T0829",
+      "T0831",
+      "T0832",
+      "T0837",
+      "T0879",
+      "T0880",
+      "T0882"
+    ],
+    "TA0106": [
+      "T0806",
+      "T0836",
+      "T0839",
+      "T0855",
+      "T0856"
+    ],
+    "TA0107": [
+      "T0800",
+      "T0803",
+      "T0804",
+      "T0805",
+      "T0809",
+      "T0814",
+      "T0816",
+      "T0835",
+      "T0838",
+      "T0851",
+      "T0857",
+      "T0878",
+      "T0881",
+      "T0892"
+    ],
+    "TA0108": [
+      "T0817",
+      "T0819",
+      "T0822",
+      "T0847",
+      "T0848",
+      "T0860",
+      "T0862",
+      "T0864",
+      "T0865",
+      "T0866",
+      "T0883",
+      "T0886"
+    ],
+    "TA0109": [
+      "T0812",
+      "T0843",
+      "T0859",
+      "T0866",
+      "T0867",
+      "T0886",
+      "T0891"
+    ],
+    "TA0110": [
+      "T0839",
+      "T0857",
+      "T0859",
+      "T0873",
+      "T0889",
+      "T0891"
+    ],
+    "TA0111": [
+      "T0874",
+      "T0890"
+    ]
   },
   "subtechniques": {},
   "groups": [
@@ -2957,13 +3240,13 @@
         "G0088",
         "G1000"
       ],
-      "T0865": [
-        "G0032",
-        "G0049",
+      "T0852": [
         "G0064",
         "G1000"
       ],
-      "T0852": [
+      "T0865": [
+        "G0032",
+        "G0049",
         "G0064",
         "G1000"
       ],
@@ -2975,13 +3258,13 @@
         "G0049",
         "G1000"
       ],
+      "T0884": [
+        "G0034"
+      ],
       "T0819": [
         "G0034"
       ],
       "T0807": [
-        "G0034"
-      ],
-      "T0884": [
         "G0034"
       ],
       "T0869": [
@@ -2993,22 +3276,22 @@
         "G0034",
         "G0082"
       ],
-      "S0606": [
-        "G0034"
-      ],
-      "S0089": [
+      "S0368": [
         "G0034"
       ],
       "S0604": [
         "G0034"
       ],
-      "S1010": [
+      "S0606": [
         "G0034"
       ],
       "S1072": [
         "G0034"
       ],
-      "S0368": [
+      "S0089": [
+        "G0034"
+      ],
+      "S1010": [
         "G0034"
       ],
       "S0366": [
@@ -3033,21 +3316,11 @@
       ]
     },
     "technique_software": {
-      "T0829": [
-        "S0372",
-        "S0604",
-        "S0607",
-        "S1157"
-      ],
       "T0809": [
         "S0604",
         "S0607",
         "S1045",
         "S1157"
-      ],
-      "T0872": [
-        "S0607",
-        "S1009"
       ],
       "T0881": [
         "S0496",
@@ -3056,8 +3329,22 @@
         "S0607",
         "S1072"
       ],
-      "T0817": [
-        "S0606"
+      "T0829": [
+        "S0372",
+        "S0604",
+        "S0607",
+        "S1157"
+      ],
+      "T0872": [
+        "S0607",
+        "S1009"
+      ],
+      "T0867": [
+        "S0366",
+        "S0368",
+        "S0603",
+        "S0606",
+        "S1045"
       ],
       "T0828": [
         "S0368",
@@ -3068,12 +3355,11 @@
         "S0606",
         "S0608"
       ],
-      "T0867": [
+      "T0866": [
         "S0366",
         "S0368",
         "S0603",
-        "S0606",
-        "S1045"
+        "S0606"
       ],
       "T0863": [
         "S0093",
@@ -3081,28 +3367,8 @@
         "S0603",
         "S0606"
       ],
-      "T0866": [
-        "S0366",
-        "S0368",
-        "S0603",
+      "T0817": [
         "S0606"
-      ],
-      "T0861": [
-        "S0093",
-        "S1045"
-      ],
-      "T0888": [
-        "S0093",
-        "S0603",
-        "S0604",
-        "S1045",
-        "S1072"
-      ],
-      "T0836": [
-        "S0603",
-        "S1045",
-        "S1072",
-        "S1165"
       ],
       "T0869": [
         "S0089",
@@ -3111,31 +3377,6 @@
         "S1009",
         "S1045",
         "S1165"
-      ],
-      "T0886": [
-        "S0496",
-        "S0603",
-        "S1045"
-      ],
-      "T0842": [
-        "S0603",
-        "S1010",
-        "S1045"
-      ],
-      "T0855": [
-        "S0604",
-        "S1045",
-        "S1072"
-      ],
-      "T0843": [
-        "S0603",
-        "S1006",
-        "S1009",
-        "S1045"
-      ],
-      "T0891": [
-        "S0603",
-        "S1045"
       ],
       "T0890": [
         "S1009",
@@ -3152,25 +3393,63 @@
         "S1009",
         "S1045"
       ],
+      "T0884": [
+        "S0604",
+        "S1045"
+      ],
+      "T0855": [
+        "S0604",
+        "S1045",
+        "S1072"
+      ],
+      "T0843": [
+        "S0603",
+        "S1006",
+        "S1009",
+        "S1045"
+      ],
+      "T0861": [
+        "S0093",
+        "S1045"
+      ],
       "T0858": [
         "S1006",
         "S1009",
         "S1045"
       ],
-      "T0884": [
+      "T0888": [
+        "S0093",
+        "S0603",
         "S0604",
+        "S1045",
+        "S1072"
+      ],
+      "T0886": [
+        "S0496",
+        "S0603",
         "S1045"
+      ],
+      "T0891": [
+        "S0603",
+        "S1045"
+      ],
+      "T0842": [
+        "S0603",
+        "S1010",
+        "S1045"
+      ],
+      "T0836": [
+        "S0603",
+        "S1045",
+        "S1072",
+        "S1165"
       ],
       "T0859": [
         "S0089",
         "S1045"
       ],
-      "T0802": [
-        "S0093",
-        "S0604",
-        "S1072"
-      ],
-      "T0862": [
+      "T0865": [
+        "S0089",
         "S0093"
       ],
       "T0814": [
@@ -3179,9 +3458,18 @@
         "S1006",
         "S1157"
       ],
-      "T0865": [
-        "S0089",
+      "T0862": [
         "S0093"
+      ],
+      "T0802": [
+        "S0093",
+        "S0604",
+        "S1072"
+      ],
+      "T0807": [
+        "S0603",
+        "S0604",
+        "S1165"
       ],
       "T0801": [
         "S0603",
@@ -3194,15 +3482,6 @@
         "S1009",
         "S1165"
       ],
-      "T0807": [
-        "S0603",
-        "S0604",
-        "S1165"
-      ],
-      "T0874": [
-        "S0603",
-        "S1009"
-      ],
       "T0851": [
         "S0603"
       ],
@@ -3212,29 +3491,6 @@
       "T0835": [
         "S0603",
         "S1006"
-      ],
-      "T0834": [
-        "S0603",
-        "S1006",
-        "S1009"
-      ],
-      "T0831": [
-        "S0603",
-        "S0604"
-      ],
-      "T0877": [
-        "S0603"
-      ],
-      "T0821": [
-        "S0603",
-        "S1006",
-        "S1009"
-      ],
-      "T0849": [
-        "S0496",
-        "S0603",
-        "S0605",
-        "S1009"
       ],
       "T0847": [
         "S0603",
@@ -3248,11 +3504,41 @@
         "S0603",
         "S1006"
       ],
+      "T0831": [
+        "S0603",
+        "S0604"
+      ],
+      "T0877": [
+        "S0603"
+      ],
+      "T0834": [
+        "S0603",
+        "S1006",
+        "S1009"
+      ],
+      "T0821": [
+        "S0603",
+        "S1006",
+        "S1009"
+      ],
+      "T0849": [
+        "S0496",
+        "S0603",
+        "S0605",
+        "S1009"
+      ],
+      "T0874": [
+        "S0603",
+        "S1009"
+      ],
       "T0840": [
         "S0604",
         "S0605"
       ],
-      "T0871": [
+      "T0880": [
+        "S1009"
+      ],
+      "T0857": [
         "S1009"
       ],
       "T0868": [
@@ -3261,21 +3547,12 @@
       "T0820": [
         "S1009"
       ],
-      "T0880": [
-        "S1009"
-      ],
       "T0853": [
         "S0496",
         "S1009"
       ],
-      "T0857": [
+      "T0871": [
         "S1009"
-      ],
-      "T0882": [
-        "S0038",
-        "S0143",
-        "S0496",
-        "S1000"
       ],
       "T0811": [
         "S0038"
@@ -3285,7 +3562,16 @@
         "S0143",
         "S1000"
       ],
+      "T0882": [
+        "S0038",
+        "S0143",
+        "S0496",
+        "S1000"
+      ],
       "T0822": [
+        "S1157"
+      ],
+      "T0883": [
         "S1157"
       ],
       "T0806": [
@@ -3293,35 +3579,32 @@
         "S1072",
         "S1157"
       ],
-      "T0883": [
-        "S1157"
-      ],
       "T0803": [
         "S0604"
       ],
+      "T0800": [
+        "S0604"
+      ],
+      "T0805": [
+        "S0604"
+      ],
       "T0815": [
+        "S0604"
+      ],
+      "T0816": [
         "S0604"
       ],
       "T0827": [
         "S0372",
         "S0604"
       ],
-      "T0805": [
-        "S0604"
-      ],
-      "T0813": [
-        "S0604"
-      ],
       "T0837": [
         "S0604"
       ],
-      "T0800": [
-        "S0604"
-      ],
-      "T0816": [
-        "S0604"
-      ],
       "T0804": [
+        "S0604"
+      ],
+      "T0813": [
         "S0604"
       ],
       "T0826": [
@@ -3332,44 +3615,10 @@
       ]
     },
     "technique_mitigations": {
-      "T0861": [
-        "M0800",
-        "M0801",
-        "M0802",
-        "M0804",
-        "M0807",
-        "M0813",
-        "M0930",
-        "M0937"
-      ],
       "T0869": [
         "M0807",
         "M0930",
         "M0931"
-      ],
-      "T0803": [
-        "M0807",
-        "M0810",
-        "M0814"
-      ],
-      "T0879": [
-        "M0805",
-        "M0807",
-        "M0812"
-      ],
-      "T0848": [
-        "M0802",
-        "M0807",
-        "M0813",
-        "M0930",
-        "M0937"
-      ],
-      "T0856": [
-        "M0802",
-        "M0807",
-        "M0813",
-        "M0930",
-        "M0937"
       ],
       "T0845": [
         "M0800",
@@ -3381,66 +3630,32 @@
         "M0930",
         "M0937"
       ],
-      "T0886": [
-        "M0800",
-        "M0801",
-        "M0804",
-        "M0807",
-        "M0813",
-        "M0918",
-        "M0927",
-        "M0930",
-        "M0937"
-      ],
-      "T0806": [
-        "M0807",
-        "M0813",
-        "M0930",
-        "M0937"
-      ],
-      "T0838": [
-        "M0800",
-        "M0801",
-        "M0804",
-        "M0807",
-        "M0813",
-        "M0918",
-        "M0930"
-      ],
-      "T0805": [
+      "T0803": [
         "M0807",
         "M0810",
-        "M0930"
+        "M0814"
       ],
-      "T0878": [
-        "M0807",
-        "M0810",
-        "M0814",
-        "M0930"
-      ],
-      "T0839": [
+      "T0800": [
+        "M0800",
         "M0801",
         "M0802",
         "M0804",
         "M0807",
-        "M0808",
+        "M0813",
+        "M0930",
+        "M0937"
+      ],
+      "T0843": [
+        "M0800",
+        "M0801",
+        "M0802",
+        "M0804",
+        "M0807",
         "M0813",
         "M0930",
         "M0937",
-        "M0941",
         "M0945",
-        "M0946",
         "M0947"
-      ],
-      "T0868": [
-        "M0800",
-        "M0801",
-        "M0802",
-        "M0804",
-        "M0807",
-        "M0813",
-        "M0930",
-        "M0937"
       ],
       "T0857": [
         "M0801",
@@ -3457,15 +3672,40 @@
         "M0947",
         "M0951"
       ],
-      "T0800": [
-        "M0800",
-        "M0801",
+      "T0856": [
         "M0802",
-        "M0804",
         "M0807",
         "M0813",
         "M0930",
         "M0937"
+      ],
+      "T0839": [
+        "M0801",
+        "M0802",
+        "M0804",
+        "M0807",
+        "M0808",
+        "M0813",
+        "M0930",
+        "M0937",
+        "M0941",
+        "M0945",
+        "M0946",
+        "M0947"
+      ],
+      "T0838": [
+        "M0800",
+        "M0801",
+        "M0804",
+        "M0807",
+        "M0813",
+        "M0918",
+        "M0930"
+      ],
+      "T0879": [
+        "M0805",
+        "M0807",
+        "M0812"
       ],
       "T0858": [
         "M0800",
@@ -3475,6 +3715,32 @@
         "M0807",
         "M0813",
         "M0930"
+      ],
+      "T0802": [
+        "M0807",
+        "M0930"
+      ],
+      "T0805": [
+        "M0807",
+        "M0810",
+        "M0930"
+      ],
+      "T0868": [
+        "M0800",
+        "M0801",
+        "M0802",
+        "M0804",
+        "M0807",
+        "M0813",
+        "M0930",
+        "M0937"
+      ],
+      "T0848": [
+        "M0802",
+        "M0807",
+        "M0813",
+        "M0930",
+        "M0937"
       ],
       "T0884": [
         "M0807",
@@ -3493,27 +3759,6 @@
         "M0937",
         "M0942"
       ],
-      "T0802": [
-        "M0807",
-        "M0930"
-      ],
-      "T0804": [
-        "M0807",
-        "M0810",
-        "M0814"
-      ],
-      "T0843": [
-        "M0800",
-        "M0801",
-        "M0802",
-        "M0804",
-        "M0807",
-        "M0813",
-        "M0930",
-        "M0937",
-        "M0945",
-        "M0947"
-      ],
       "T0855": [
         "M0802",
         "M0807",
@@ -3522,13 +3767,43 @@
         "M0930",
         "M0937"
       ],
-      "T0811": [
-        "M0917",
+      "T0861": [
+        "M0800",
+        "M0801",
+        "M0802",
+        "M0804",
+        "M0807",
+        "M0813",
+        "M0930",
+        "M0937"
+      ],
+      "T0806": [
+        "M0807",
+        "M0813",
+        "M0930",
+        "M0937"
+      ],
+      "T0878": [
+        "M0807",
+        "M0810",
+        "M0814",
+        "M0930"
+      ],
+      "T0804": [
+        "M0807",
+        "M0810",
+        "M0814"
+      ],
+      "T0886": [
+        "M0800",
+        "M0801",
+        "M0804",
+        "M0807",
+        "M0813",
         "M0918",
-        "M0922",
-        "M0926",
-        "M0941",
-        "M0947"
+        "M0927",
+        "M0930",
+        "M0937"
       ],
       "T0822": [
         "M0918",
@@ -3544,6 +3819,14 @@
         "M0922",
         "M0924",
         "M0930"
+      ],
+      "T0811": [
+        "M0917",
+        "M0918",
+        "M0922",
+        "M0926",
+        "M0941",
+        "M0947"
       ],
       "T0859": [
         "M0801",
@@ -3573,11 +3856,11 @@
         "M0942",
         "M0947"
       ],
-      "T0871": [
+      "T0889": [
         "M0800",
-        "M0801",
         "M0804",
-        "M0938"
+        "M0945",
+        "M0947"
       ],
       "T0821": [
         "M0800",
@@ -3591,50 +3874,20 @@
         "M0931",
         "M0942"
       ],
-      "T0889": [
-        "M0800",
-        "M0804",
-        "M0945",
-        "M0947"
-      ],
       "T0836": [
         "M0800",
         "M0804",
         "M0818",
         "M0947"
       ],
-      "T0817": [
-        "M0921",
-        "M0948",
-        "M0950",
-        "M0951"
+      "T0871": [
+        "M0800",
+        "M0801",
+        "M0804",
+        "M0938"
       ],
-      "T0862": [
-        "M0817",
-        "M0916",
-        "M0945",
-        "M0947",
-        "M0951"
-      ],
-      "T0820": [
+      "T0890": [
         "M0919",
-        "M0948",
-        "M0950",
-        "M0951"
-      ],
-      "T0864": [
-        "M0930",
-        "M0941",
-        "M0947",
-        "M0949",
-        "M0951"
-      ],
-      "T0866": [
-        "M0916",
-        "M0919",
-        "M0926",
-        "M0930",
-        "M0942",
         "M0948",
         "M0950",
         "M0951"
@@ -3647,17 +3900,41 @@
         "M0950",
         "M0951"
       ],
-      "T0890": [
+      "T0866": [
+        "M0916",
+        "M0919",
+        "M0926",
+        "M0930",
+        "M0942",
+        "M0948",
+        "M0950",
+        "M0951"
+      ],
+      "T0820": [
         "M0919",
         "M0948",
         "M0950",
         "M0951"
       ],
-      "T0873": [
-        "M0922",
-        "M0941",
+      "T0862": [
+        "M0817",
+        "M0916",
         "M0945",
-        "M0947"
+        "M0947",
+        "M0951"
+      ],
+      "T0817": [
+        "M0921",
+        "M0948",
+        "M0950",
+        "M0951"
+      ],
+      "T0864": [
+        "M0930",
+        "M0941",
+        "M0947",
+        "M0949",
+        "M0951"
       ],
       "T0893": [
         "M0803",
@@ -3671,6 +3948,12 @@
         "M0922",
         "M0941"
       ],
+      "T0873": [
+        "M0922",
+        "M0941",
+        "M0945",
+        "M0947"
+      ],
       "T0874": [
         "M0944",
         "M0947"
@@ -3679,6 +3962,16 @@
         "M0945",
         "M0947"
       ],
+      "T0807": [
+        "M0938",
+        "M0942"
+      ],
+      "T0834": [
+        "M0938"
+      ],
+      "T0894": [
+        "M0938"
+      ],
       "T0863": [
         "M0917",
         "M0921",
@@ -3686,9 +3979,6 @@
         "M0938",
         "M0945",
         "M0949"
-      ],
-      "T0894": [
-        "M0938"
       ],
       "T0849": [
         "M0922",
@@ -3700,19 +3990,22 @@
         "M0942",
         "M0948"
       ],
-      "T0834": [
-        "M0938"
+      "T0829": [
+        "M0810",
+        "M0811",
+        "M0953"
       ],
-      "T0807": [
-        "M0938",
-        "M0942"
+      "T0815": [
+        "M0810",
+        "M0811",
+        "M0953"
       ],
       "T0831": [
         "M0802",
         "M0810",
         "M0953"
       ],
-      "T0827": [
+      "T0826": [
         "M0810",
         "M0811",
         "M0953"
@@ -3722,7 +4015,7 @@
         "M0811",
         "M0953"
       ],
-      "T0826": [
+      "T0827": [
         "M0810",
         "M0811",
         "M0953"
@@ -3732,19 +4025,6 @@
         "M0810",
         "M0953"
       ],
-      "T0815": [
-        "M0810",
-        "M0811",
-        "M0953"
-      ],
-      "T0829": [
-        "M0810",
-        "M0811",
-        "M0953"
-      ],
-      "T0883": [
-        "M0930"
-      ],
       "T0842": [
         "M0808",
         "M0814",
@@ -3752,36 +4032,30 @@
         "M0930",
         "M0932"
       ],
+      "T0883": [
+        "M0930"
+      ],
       "T0880": [
         "M0805",
         "M0812"
       ],
+      "T0891": [
+        "M0801"
+      ],
       "T0812": [
         "M0801",
         "M0927"
-      ],
-      "T0891": [
-        "M0801"
       ],
       "T0809": [
         "M0922",
         "M0926",
         "M0953"
       ],
-      "T0888": [
-        "M0814"
-      ],
       "T0846": [
         "M0814"
       ],
-      "T0835": [
-        "M0816"
-      ],
-      "T0877": [
-        "M0816"
-      ],
-      "T0823": [
-        "M0816"
+      "T0888": [
+        "M0814"
       ],
       "T0852": [
         "M0816"
@@ -3789,7 +4063,16 @@
       "T0801": [
         "M0816"
       ],
+      "T0823": [
+        "M0816"
+      ],
+      "T0877": [
+        "M0816"
+      ],
       "T0840": [
+        "M0816"
+      ],
+      "T0835": [
         "M0816"
       ],
       "T0865": [

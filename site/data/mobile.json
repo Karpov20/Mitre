@@ -1,7 +1,7 @@
 {
   "meta": {
     "domain": "mobile",
-    "generated_at": "2025-12-18T12:44:05+00:00",
+    "generated_at": "2026-01-10T20:47:08+00:00",
     "source_url": "https://raw.githubusercontent.com/mitre/cti/master/mobile-attack/mobile-attack.json",
     "stix_spec_version": "2.0"
   },
@@ -124,7 +124,9 @@
       "url": "https://attack.mitre.org/techniques/T1398",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0028"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -139,7 +141,9 @@
       "url": "https://attack.mitre.org/techniques/T1404",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0029"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -154,7 +158,9 @@
       "url": "https://attack.mitre.org/techniques/T1406",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -169,7 +175,9 @@
       "url": "https://attack.mitre.org/techniques/T1406/001",
       "is_subtechnique": true,
       "parent_id": "T1406",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -183,7 +191,9 @@
       "url": "https://attack.mitre.org/techniques/T1406/002",
       "is_subtechnique": true,
       "parent_id": "T1406",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "iOS",
         "Android"
@@ -198,7 +208,9 @@
       "url": "https://attack.mitre.org/techniques/T1407",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -213,7 +225,9 @@
       "url": "https://attack.mitre.org/techniques/T1409",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -228,7 +242,10 @@
       "url": "https://attack.mitre.org/techniques/T1414",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0031"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -243,7 +260,10 @@
       "url": "https://attack.mitre.org/techniques/T1417",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0031"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -258,7 +278,10 @@
       "url": "https://attack.mitre.org/techniques/T1417/001",
       "is_subtechnique": true,
       "parent_id": "T1417",
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0031"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -273,7 +296,10 @@
       "url": "https://attack.mitre.org/techniques/T1417/002",
       "is_subtechnique": true,
       "parent_id": "T1417",
-      "tactics": [],
+      "tactics": [
+        "TA0031",
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -288,7 +314,9 @@
       "url": "https://attack.mitre.org/techniques/T1418",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -303,7 +331,9 @@
       "url": "https://attack.mitre.org/techniques/T1418/001",
       "is_subtechnique": true,
       "parent_id": "T1418",
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -318,7 +348,9 @@
       "url": "https://attack.mitre.org/techniques/T1420",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -333,7 +365,9 @@
       "url": "https://attack.mitre.org/techniques/T1421",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android"
       ],
@@ -347,7 +381,9 @@
       "url": "https://attack.mitre.org/techniques/T1422",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -362,7 +398,9 @@
       "url": "https://attack.mitre.org/techniques/T1422/001",
       "is_subtechnique": true,
       "parent_id": "T1422",
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -377,7 +415,9 @@
       "url": "https://attack.mitre.org/techniques/T1422/002",
       "is_subtechnique": true,
       "parent_id": "T1422",
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -392,7 +432,9 @@
       "url": "https://attack.mitre.org/techniques/T1423",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -407,7 +449,9 @@
       "url": "https://attack.mitre.org/techniques/T1424",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -422,7 +466,9 @@
       "url": "https://attack.mitre.org/techniques/T1426",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -437,7 +483,9 @@
       "url": "https://attack.mitre.org/techniques/T1428",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0033"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -452,7 +500,9 @@
       "url": "https://attack.mitre.org/techniques/T1429",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -467,7 +517,10 @@
       "url": "https://attack.mitre.org/techniques/T1430",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -482,7 +535,10 @@
       "url": "https://attack.mitre.org/techniques/T1430/001",
       "is_subtechnique": true,
       "parent_id": "T1430",
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -497,7 +553,10 @@
       "url": "https://attack.mitre.org/techniques/T1430/002",
       "is_subtechnique": true,
       "parent_id": "T1430",
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0032"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -512,7 +571,9 @@
       "url": "https://attack.mitre.org/techniques/T1437",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -527,7 +588,9 @@
       "url": "https://attack.mitre.org/techniques/T1437/001",
       "is_subtechnique": true,
       "parent_id": "T1437",
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -542,7 +605,9 @@
       "url": "https://attack.mitre.org/techniques/T1451",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0027"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -557,7 +622,10 @@
       "url": "https://attack.mitre.org/techniques/T1453",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0031"
+      ],
       "platforms": [
         "Android"
       ],
@@ -571,7 +639,9 @@
       "url": "https://attack.mitre.org/techniques/T1456",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0027"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -586,7 +656,10 @@
       "url": "https://attack.mitre.org/techniques/T1458",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0027",
+        "TA0033"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -601,7 +674,9 @@
       "url": "https://attack.mitre.org/techniques/T1461",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0027"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -616,7 +691,9 @@
       "url": "https://attack.mitre.org/techniques/T1464",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0034"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -631,7 +708,9 @@
       "url": "https://attack.mitre.org/techniques/T1471",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0034"
+      ],
       "platforms": [
         "Android"
       ],
@@ -645,7 +724,9 @@
       "url": "https://attack.mitre.org/techniques/T1474",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0027"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -660,7 +741,9 @@
       "url": "https://attack.mitre.org/techniques/T1474/001",
       "is_subtechnique": true,
       "parent_id": "T1474",
-      "tactics": [],
+      "tactics": [
+        "TA0027"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -675,7 +758,9 @@
       "url": "https://attack.mitre.org/techniques/T1474/002",
       "is_subtechnique": true,
       "parent_id": "T1474",
-      "tactics": [],
+      "tactics": [
+        "TA0027"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -690,7 +775,9 @@
       "url": "https://attack.mitre.org/techniques/T1474/003",
       "is_subtechnique": true,
       "parent_id": "T1474",
-      "tactics": [],
+      "tactics": [
+        "TA0027"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -705,7 +792,9 @@
       "url": "https://attack.mitre.org/techniques/T1481",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -720,7 +809,9 @@
       "url": "https://attack.mitre.org/techniques/T1481/001",
       "is_subtechnique": true,
       "parent_id": "T1481",
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -735,7 +826,9 @@
       "url": "https://attack.mitre.org/techniques/T1481/002",
       "is_subtechnique": true,
       "parent_id": "T1481",
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -750,7 +843,9 @@
       "url": "https://attack.mitre.org/techniques/T1481/003",
       "is_subtechnique": true,
       "parent_id": "T1481",
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -765,7 +860,9 @@
       "url": "https://attack.mitre.org/techniques/T1509",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -780,7 +877,9 @@
       "url": "https://attack.mitre.org/techniques/T1512",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -795,7 +894,9 @@
       "url": "https://attack.mitre.org/techniques/T1513",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android"
       ],
@@ -809,7 +910,10 @@
       "url": "https://attack.mitre.org/techniques/T1516",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030",
+        "TA0034"
+      ],
       "platforms": [
         "Android"
       ],
@@ -823,7 +927,10 @@
       "url": "https://attack.mitre.org/techniques/T1517",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0031"
+      ],
       "platforms": [
         "Android"
       ],
@@ -837,7 +944,9 @@
       "url": "https://attack.mitre.org/techniques/T1521",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -852,7 +961,9 @@
       "url": "https://attack.mitre.org/techniques/T1521/001",
       "is_subtechnique": true,
       "parent_id": "T1521",
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -867,7 +978,9 @@
       "url": "https://attack.mitre.org/techniques/T1521/002",
       "is_subtechnique": true,
       "parent_id": "T1521",
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -882,7 +995,9 @@
       "url": "https://attack.mitre.org/techniques/T1521/003",
       "is_subtechnique": true,
       "parent_id": "T1521",
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -897,7 +1012,9 @@
       "url": "https://attack.mitre.org/techniques/T1532",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -912,7 +1029,9 @@
       "url": "https://attack.mitre.org/techniques/T1533",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -927,7 +1046,10 @@
       "url": "https://attack.mitre.org/techniques/T1541",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030",
+        "TA0028"
+      ],
       "platforms": [
         "Android"
       ],
@@ -941,7 +1063,9 @@
       "url": "https://attack.mitre.org/techniques/T1544",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -956,7 +1080,10 @@
       "url": "https://attack.mitre.org/techniques/T1575",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030",
+        "TA0041"
+      ],
       "platforms": [
         "Android"
       ],
@@ -970,7 +1097,9 @@
       "url": "https://attack.mitre.org/techniques/T1577",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0028"
+      ],
       "platforms": [
         "Android"
       ],
@@ -984,7 +1113,9 @@
       "url": "https://attack.mitre.org/techniques/T1582",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0034"
+      ],
       "platforms": [
         "Android"
       ],
@@ -998,7 +1129,10 @@
       "url": "https://attack.mitre.org/techniques/T1603",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0041",
+        "TA0028"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1013,7 +1147,9 @@
       "url": "https://attack.mitre.org/techniques/T1604",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1027,7 +1163,11 @@
       "url": "https://attack.mitre.org/techniques/T1616",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0034",
+        "TA0037"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1041,7 +1181,9 @@
       "url": "https://attack.mitre.org/techniques/T1617",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1055,7 +1197,9 @@
       "url": "https://attack.mitre.org/techniques/T1623",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0041"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1070,7 +1214,9 @@
       "url": "https://attack.mitre.org/techniques/T1623/001",
       "is_subtechnique": true,
       "parent_id": "T1623",
-      "tactics": [],
+      "tactics": [
+        "TA0041"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1085,7 +1231,9 @@
       "url": "https://attack.mitre.org/techniques/T1624",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0028"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1099,7 +1247,9 @@
       "url": "https://attack.mitre.org/techniques/T1624/001",
       "is_subtechnique": true,
       "parent_id": "T1624",
-      "tactics": [],
+      "tactics": [
+        "TA0028"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1113,7 +1263,9 @@
       "url": "https://attack.mitre.org/techniques/T1625",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0028"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1127,7 +1279,9 @@
       "url": "https://attack.mitre.org/techniques/T1625/001",
       "is_subtechnique": true,
       "parent_id": "T1625",
-      "tactics": [],
+      "tactics": [
+        "TA0028"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1141,7 +1295,9 @@
       "url": "https://attack.mitre.org/techniques/T1626",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0029"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1155,7 +1311,9 @@
       "url": "https://attack.mitre.org/techniques/T1626/001",
       "is_subtechnique": true,
       "parent_id": "T1626",
-      "tactics": [],
+      "tactics": [
+        "TA0029"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1169,7 +1327,9 @@
       "url": "https://attack.mitre.org/techniques/T1627",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1184,7 +1344,9 @@
       "url": "https://attack.mitre.org/techniques/T1627/001",
       "is_subtechnique": true,
       "parent_id": "T1627",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1199,7 +1361,9 @@
       "url": "https://attack.mitre.org/techniques/T1628",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1213,7 +1377,9 @@
       "url": "https://attack.mitre.org/techniques/T1628/001",
       "is_subtechnique": true,
       "parent_id": "T1628",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1227,7 +1393,9 @@
       "url": "https://attack.mitre.org/techniques/T1628/002",
       "is_subtechnique": true,
       "parent_id": "T1628",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1241,7 +1409,9 @@
       "url": "https://attack.mitre.org/techniques/T1628/003",
       "is_subtechnique": true,
       "parent_id": "T1628",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1255,7 +1425,9 @@
       "url": "https://attack.mitre.org/techniques/T1629",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1269,7 +1441,9 @@
       "url": "https://attack.mitre.org/techniques/T1629/001",
       "is_subtechnique": true,
       "parent_id": "T1629",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1283,7 +1457,9 @@
       "url": "https://attack.mitre.org/techniques/T1629/002",
       "is_subtechnique": true,
       "parent_id": "T1629",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1297,7 +1473,9 @@
       "url": "https://attack.mitre.org/techniques/T1629/003",
       "is_subtechnique": true,
       "parent_id": "T1629",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1311,7 +1489,9 @@
       "url": "https://attack.mitre.org/techniques/T1630",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "iOS",
         "Android"
@@ -1326,7 +1506,9 @@
       "url": "https://attack.mitre.org/techniques/T1630/001",
       "is_subtechnique": true,
       "parent_id": "T1630",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1340,7 +1522,9 @@
       "url": "https://attack.mitre.org/techniques/T1630/002",
       "is_subtechnique": true,
       "parent_id": "T1630",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1354,7 +1538,9 @@
       "url": "https://attack.mitre.org/techniques/T1630/003",
       "is_subtechnique": true,
       "parent_id": "T1630",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1369,7 +1555,10 @@
       "url": "https://attack.mitre.org/techniques/T1631",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030",
+        "TA0029"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1384,7 +1573,10 @@
       "url": "https://attack.mitre.org/techniques/T1631/001",
       "is_subtechnique": true,
       "parent_id": "T1631",
-      "tactics": [],
+      "tactics": [
+        "TA0030",
+        "TA0029"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1399,7 +1591,9 @@
       "url": "https://attack.mitre.org/techniques/T1632",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1414,7 +1608,9 @@
       "url": "https://attack.mitre.org/techniques/T1632/001",
       "is_subtechnique": true,
       "parent_id": "T1632",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1429,7 +1625,9 @@
       "url": "https://attack.mitre.org/techniques/T1633",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1444,7 +1642,9 @@
       "url": "https://attack.mitre.org/techniques/T1633/001",
       "is_subtechnique": true,
       "parent_id": "T1633",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1459,7 +1659,9 @@
       "url": "https://attack.mitre.org/techniques/T1634",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0031"
+      ],
       "platforms": [
         "iOS"
       ],
@@ -1473,7 +1675,9 @@
       "url": "https://attack.mitre.org/techniques/T1634/001",
       "is_subtechnique": true,
       "parent_id": "T1634",
-      "tactics": [],
+      "tactics": [
+        "TA0031"
+      ],
       "platforms": [
         "iOS"
       ],
@@ -1487,7 +1691,9 @@
       "url": "https://attack.mitre.org/techniques/T1635",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0031"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1502,7 +1708,9 @@
       "url": "https://attack.mitre.org/techniques/T1635/001",
       "is_subtechnique": true,
       "parent_id": "T1635",
-      "tactics": [],
+      "tactics": [
+        "TA0031"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1517,7 +1725,9 @@
       "url": "https://attack.mitre.org/techniques/T1636",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1532,7 +1742,9 @@
       "url": "https://attack.mitre.org/techniques/T1636/001",
       "is_subtechnique": true,
       "parent_id": "T1636",
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1547,7 +1759,9 @@
       "url": "https://attack.mitre.org/techniques/T1636/002",
       "is_subtechnique": true,
       "parent_id": "T1636",
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1562,7 +1776,9 @@
       "url": "https://attack.mitre.org/techniques/T1636/003",
       "is_subtechnique": true,
       "parent_id": "T1636",
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1577,7 +1793,9 @@
       "url": "https://attack.mitre.org/techniques/T1636/004",
       "is_subtechnique": true,
       "parent_id": "T1636",
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1592,7 +1810,9 @@
       "url": "https://attack.mitre.org/techniques/T1636/005",
       "is_subtechnique": true,
       "parent_id": "T1636",
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1607,7 +1827,9 @@
       "url": "https://attack.mitre.org/techniques/T1637",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1622,7 +1844,9 @@
       "url": "https://attack.mitre.org/techniques/T1637/001",
       "is_subtechnique": true,
       "parent_id": "T1637",
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1637,7 +1861,9 @@
       "url": "https://attack.mitre.org/techniques/T1638",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1652,7 +1878,9 @@
       "url": "https://attack.mitre.org/techniques/T1639",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0036"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1667,7 +1895,9 @@
       "url": "https://attack.mitre.org/techniques/T1639/001",
       "is_subtechnique": true,
       "parent_id": "T1639",
-      "tactics": [],
+      "tactics": [
+        "TA0036"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1682,7 +1912,9 @@
       "url": "https://attack.mitre.org/techniques/T1640",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0034"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1696,7 +1928,9 @@
       "url": "https://attack.mitre.org/techniques/T1641",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0034"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1710,7 +1944,9 @@
       "url": "https://attack.mitre.org/techniques/T1641/001",
       "is_subtechnique": true,
       "parent_id": "T1641",
-      "tactics": [],
+      "tactics": [
+        "TA0034"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1724,7 +1960,9 @@
       "url": "https://attack.mitre.org/techniques/T1642",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0034"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1739,7 +1977,9 @@
       "url": "https://attack.mitre.org/techniques/T1643",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0034"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1754,7 +1994,9 @@
       "url": "https://attack.mitre.org/techniques/T1644",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1769,7 +2011,9 @@
       "url": "https://attack.mitre.org/techniques/T1645",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0028"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1784,7 +2028,9 @@
       "url": "https://attack.mitre.org/techniques/T1646",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0036"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1799,7 +2045,9 @@
       "url": "https://attack.mitre.org/techniques/T1655",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1814,7 +2062,9 @@
       "url": "https://attack.mitre.org/techniques/T1655/001",
       "is_subtechnique": true,
       "parent_id": "T1655",
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1829,7 +2079,9 @@
       "url": "https://attack.mitre.org/techniques/T1658",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0041"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1844,7 +2096,9 @@
       "url": "https://attack.mitre.org/techniques/T1660",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0027"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1859,7 +2113,10 @@
       "url": "https://attack.mitre.org/techniques/T1661",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0027",
+        "TA0030"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1874,7 +2131,9 @@
       "url": "https://attack.mitre.org/techniques/T1662",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0034"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1888,7 +2147,9 @@
       "url": "https://attack.mitre.org/techniques/T1663",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0037"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1903,7 +2164,9 @@
       "url": "https://attack.mitre.org/techniques/T1664",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0027"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1918,7 +2181,9 @@
       "url": "https://attack.mitre.org/techniques/T1670",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0030"
+      ],
       "platforms": [
         "Android"
       ],
@@ -1932,7 +2197,10 @@
       "url": "https://attack.mitre.org/techniques/T1676",
       "is_subtechnique": false,
       "parent_id": null,
-      "tactics": [],
+      "tactics": [
+        "TA0035",
+        "TA0028"
+      ],
       "platforms": [
         "Android",
         "iOS"
@@ -1941,18 +2209,122 @@
     }
   ],
   "matrix": {
-    "TA0027": [],
-    "TA0028": [],
-    "TA0029": [],
-    "TA0030": [],
-    "TA0031": [],
-    "TA0032": [],
-    "TA0033": [],
-    "TA0034": [],
-    "TA0035": [],
-    "TA0036": [],
-    "TA0037": [],
-    "TA0041": []
+    "TA0027": [
+      "T1451",
+      "T1456",
+      "T1458",
+      "T1461",
+      "T1474",
+      "T1660",
+      "T1661",
+      "T1664"
+    ],
+    "TA0028": [
+      "T1398",
+      "T1541",
+      "T1577",
+      "T1603",
+      "T1624",
+      "T1625",
+      "T1645",
+      "T1676"
+    ],
+    "TA0029": [
+      "T1404",
+      "T1626",
+      "T1631"
+    ],
+    "TA0030": [
+      "T1406",
+      "T1407",
+      "T1516",
+      "T1541",
+      "T1575",
+      "T1604",
+      "T1617",
+      "T1627",
+      "T1628",
+      "T1629",
+      "T1630",
+      "T1631",
+      "T1632",
+      "T1633",
+      "T1655",
+      "T1661",
+      "T1670"
+    ],
+    "TA0031": [
+      "T1414",
+      "T1417",
+      "T1453",
+      "T1517",
+      "T1634",
+      "T1635"
+    ],
+    "TA0032": [
+      "T1418",
+      "T1420",
+      "T1421",
+      "T1422",
+      "T1423",
+      "T1424",
+      "T1426",
+      "T1430"
+    ],
+    "TA0033": [
+      "T1428",
+      "T1458"
+    ],
+    "TA0034": [
+      "T1464",
+      "T1471",
+      "T1516",
+      "T1582",
+      "T1616",
+      "T1640",
+      "T1641",
+      "T1642",
+      "T1643",
+      "T1662"
+    ],
+    "TA0035": [
+      "T1409",
+      "T1414",
+      "T1417",
+      "T1429",
+      "T1430",
+      "T1453",
+      "T1512",
+      "T1513",
+      "T1517",
+      "T1532",
+      "T1533",
+      "T1616",
+      "T1636",
+      "T1638",
+      "T1676"
+    ],
+    "TA0036": [
+      "T1639",
+      "T1646"
+    ],
+    "TA0037": [
+      "T1437",
+      "T1481",
+      "T1509",
+      "T1521",
+      "T1544",
+      "T1616",
+      "T1637",
+      "T1644",
+      "T1663"
+    ],
+    "TA0041": [
+      "T1575",
+      "T1603",
+      "T1623",
+      "T1658"
+    ]
   },
   "subtechniques": {
     "T1406": [
@@ -5877,49 +6249,49 @@
       ]
     },
     "technique_groups": {
-      "T1627.001": [
-        "G0112"
-      ],
-      "T1429": [
-        "G0112"
-      ],
-      "T1417.001": [
-        "G0112"
-      ],
       "T1512": [
-        "G0112"
-      ],
-      "T1521.001": [
-        "G0112"
-      ],
-      "T1407": [
-        "G0112"
-      ],
-      "T1636.004": [
-        "G0112"
-      ],
-      "T1636.003": [
         "G0112"
       ],
       "T1633.001": [
         "G0112"
       ],
-      "T1420": [
+      "T1417.001": [
         "G0112"
       ],
-      "T1426": [
+      "T1407": [
+        "G0112"
+      ],
+      "T1636.003": [
         "G0112"
       ],
       "T1632.001": [
         "G0112"
       ],
-      "T1533": [
+      "T1406": [
+        "G0112"
+      ],
+      "T1420": [
+        "G0112"
+      ],
+      "T1429": [
+        "G0112"
+      ],
+      "T1636.004": [
         "G0112"
       ],
       "T1628.003": [
         "G0112"
       ],
-      "T1406": [
+      "T1521.001": [
+        "G0112"
+      ],
+      "T1426": [
+        "G0112"
+      ],
+      "T1533": [
+        "G0112"
+      ],
+      "T1627.001": [
         "G0112"
       ],
       "T1430": [
@@ -5936,12 +6308,12 @@
         "G1028",
         "G1029"
       ],
+      "T1422": [
+        "G1028"
+      ],
       "T1655.001": [
         "G0097",
         "G1019",
-        "G1028"
-      ],
-      "T1422": [
         "G1028"
       ],
       "T1409": [
@@ -5965,25 +6337,25 @@
       "S0314": [
         "G0007"
       ],
-      "S1126": [
-        "G1028"
-      ],
       "S0577": [
-        "G1028"
-      ],
-      "S0505": [
         "G1028"
       ],
       "S1195": [
         "G1028"
       ],
+      "S0505": [
+        "G1028"
+      ],
+      "S1126": [
+        "G1028"
+      ],
       "S1185": [
         "G0096"
       ],
-      "S1082": [
+      "S1077": [
         "G0142"
       ],
-      "S1077": [
+      "S1082": [
         "G0142"
       ],
       "S1128": [
@@ -6021,6 +6393,61 @@
         "S1095",
         "S1103",
         "S1195"
+      ],
+      "T1636.003": [
+        "S0289",
+        "S0292",
+        "S0304",
+        "S0305",
+        "S0309",
+        "S0316",
+        "S0323",
+        "S0324",
+        "S0328",
+        "S0399",
+        "S0403",
+        "S0405",
+        "S0406",
+        "S0407",
+        "S0408",
+        "S0411",
+        "S0421",
+        "S0422",
+        "S0423",
+        "S0425",
+        "S0463",
+        "S0480",
+        "S0485",
+        "S0489",
+        "S0505",
+        "S0506",
+        "S0507",
+        "S0509",
+        "S0522",
+        "S0535",
+        "S0536",
+        "S0539",
+        "S0540",
+        "S0544",
+        "S0549",
+        "S0550",
+        "S0551",
+        "S0558",
+        "S1061",
+        "S1067",
+        "S1069",
+        "S1077",
+        "S1079",
+        "S1080",
+        "S1082",
+        "S1095",
+        "S1126",
+        "S1128",
+        "S1185",
+        "S1195",
+        "S1231",
+        "S1241",
+        "S1243"
       ],
       "T1429": [
         "S0182",
@@ -6143,61 +6570,6 @@
         "S1241",
         "S1243"
       ],
-      "T1636.003": [
-        "S0289",
-        "S0292",
-        "S0304",
-        "S0305",
-        "S0309",
-        "S0316",
-        "S0323",
-        "S0324",
-        "S0328",
-        "S0399",
-        "S0403",
-        "S0405",
-        "S0406",
-        "S0407",
-        "S0408",
-        "S0411",
-        "S0421",
-        "S0422",
-        "S0423",
-        "S0425",
-        "S0463",
-        "S0480",
-        "S0485",
-        "S0489",
-        "S0505",
-        "S0506",
-        "S0507",
-        "S0509",
-        "S0522",
-        "S0535",
-        "S0536",
-        "S0539",
-        "S0540",
-        "S0544",
-        "S0549",
-        "S0550",
-        "S0551",
-        "S0558",
-        "S1061",
-        "S1067",
-        "S1069",
-        "S1077",
-        "S1079",
-        "S1080",
-        "S1082",
-        "S1095",
-        "S1126",
-        "S1128",
-        "S1185",
-        "S1195",
-        "S1231",
-        "S1241",
-        "S1243"
-      ],
       "T1533": [
         "S0290",
         "S0295",
@@ -6307,16 +6679,6 @@
         "S1241",
         "S1243"
       ],
-      "T1626.001": [
-        "S0318",
-        "S0522",
-        "S0536",
-        "S0539",
-        "S0540",
-        "S1061",
-        "S1077",
-        "S1082"
-      ],
       "T1512": [
         "S0292",
         "S0295",
@@ -6357,6 +6719,46 @@
         "S1241",
         "S1243"
       ],
+      "T1636.002": [
+        "S0182",
+        "S0289",
+        "S0292",
+        "S0304",
+        "S0309",
+        "S0316",
+        "S0320",
+        "S0324",
+        "S0328",
+        "S0329",
+        "S0399",
+        "S0405",
+        "S0407",
+        "S0418",
+        "S0421",
+        "S0425",
+        "S0463",
+        "S0489",
+        "S0506",
+        "S0539",
+        "S0544",
+        "S0549",
+        "S0550",
+        "S0551",
+        "S0558",
+        "S1054",
+        "S1061",
+        "S1069",
+        "S1077",
+        "S1079",
+        "S1080",
+        "S1082",
+        "S1092",
+        "S1095",
+        "S1185",
+        "S1195",
+        "S1241",
+        "S1243"
+      ],
       "T1633.001": [
         "S0301",
         "S0411",
@@ -6374,21 +6776,60 @@
         "S1083",
         "S1094"
       ],
-      "T1544": [
+      "T1422.001": [
+        "S0316",
         "S0326",
+        "S0405",
         "S0407",
-        "S0418",
-        "S0485",
-        "S1055",
+        "S0425",
+        "S0427",
+        "S0463",
+        "S0478",
+        "S0506",
+        "S0509",
+        "S0522",
+        "S0529",
+        "S0540",
+        "S0545",
+        "S1056",
         "S1061",
-        "S1082",
+        "S1077",
+        "S1079",
+        "S1093"
+      ],
+      "T1629.003": [
+        "S0420",
+        "S0422",
+        "S0480",
+        "S0485",
+        "S0494",
+        "S1054",
+        "S1061",
+        "S1067",
         "S1083",
-        "S1126",
-        "S1185",
+        "S1094",
         "S1195",
-        "S1216",
-        "S1225",
-        "S1231"
+        "S1214"
+      ],
+      "T1404": [
+        "S0182",
+        "S0289",
+        "S0290",
+        "S0293",
+        "S0294",
+        "S0316",
+        "S0322",
+        "S0324",
+        "S0327",
+        "S0405",
+        "S0420",
+        "S0440",
+        "S0463",
+        "S0494",
+        "S0550",
+        "S1061",
+        "S1126",
+        "S1185"
       ],
       "T1422": [
         "S0291",
@@ -6437,20 +6878,63 @@
         "S1231",
         "S1241"
       ],
-      "T1517": [
-        "S0425",
-        "S0432",
+      "T1418": [
+        "S0311",
+        "S0316",
+        "S0328",
+        "S0399",
+        "S0403",
+        "S0405",
+        "S0407",
+        "S0408",
+        "S0411",
+        "S0418",
+        "S0421",
+        "S0422",
+        "S0423",
+        "S0424",
+        "S0427",
+        "S0440",
+        "S0463",
+        "S0478",
+        "S0479",
+        "S0480",
         "S0485",
         "S0489",
-        "S1055",
+        "S0505",
+        "S0509",
+        "S0525",
+        "S0529",
+        "S0535",
+        "S0536",
+        "S0539",
+        "S0544",
+        "S0545",
+        "S0550",
+        "S0551",
+        "S0558",
         "S1061",
         "S1062",
-        "S1067",
+        "S1069",
         "S1077",
+        "S1079",
+        "S1082",
         "S1083",
-        "S1092",
-        "S1103",
-        "S1195"
+        "S1185",
+        "S1215",
+        "S1216",
+        "S1225",
+        "S1231",
+        "S1241"
+      ],
+      "T1623.001": [
+        "S0544",
+        "S0550",
+        "S0555",
+        "S0558",
+        "S0655",
+        "S1061",
+        "S1082"
       ],
       "T1437.001": [
         "S0304",
@@ -6500,113 +6984,20 @@
         "S1231",
         "S1241"
       ],
-      "T1404": [
-        "S0182",
-        "S0289",
-        "S0290",
-        "S0293",
-        "S0294",
-        "S0316",
-        "S0322",
-        "S0324",
-        "S0327",
-        "S0405",
-        "S0420",
-        "S0440",
-        "S0463",
-        "S0494",
-        "S0550",
-        "S1061",
-        "S1126",
-        "S1185"
-      ],
-      "T1646": [
-        "S0326",
-        "S0399",
-        "S0418",
-        "S0421",
-        "S0424",
-        "S0490",
-        "S0507",
-        "S0551",
-        "S1054",
+      "T1517": [
+        "S0425",
+        "S0432",
+        "S0485",
+        "S0489",
         "S1055",
         "S1061",
+        "S1062",
         "S1067",
         "S1077",
-        "S1079",
-        "S1080",
-        "S1082",
         "S1083",
-        "S1093",
-        "S1094",
-        "S1095",
-        "S1185",
-        "S1215",
-        "S1225",
-        "S1231",
-        "S1241"
-      ],
-      "T1636.002": [
-        "S0182",
-        "S0289",
-        "S0292",
-        "S0304",
-        "S0309",
-        "S0316",
-        "S0320",
-        "S0324",
-        "S0328",
-        "S0329",
-        "S0399",
-        "S0405",
-        "S0407",
-        "S0418",
-        "S0421",
-        "S0425",
-        "S0463",
-        "S0489",
-        "S0506",
-        "S0539",
-        "S0544",
-        "S0549",
-        "S0550",
-        "S0551",
-        "S0558",
-        "S1054",
-        "S1061",
-        "S1069",
-        "S1077",
-        "S1079",
-        "S1080",
-        "S1082",
         "S1092",
-        "S1095",
-        "S1185",
-        "S1195",
-        "S1241",
-        "S1243"
-      ],
-      "T1422.001": [
-        "S0316",
-        "S0326",
-        "S0405",
-        "S0407",
-        "S0425",
-        "S0427",
-        "S0463",
-        "S0478",
-        "S0506",
-        "S0509",
-        "S0522",
-        "S0529",
-        "S0540",
-        "S0545",
-        "S1056",
-        "S1061",
-        "S1077",
-        "S1079",
-        "S1093"
+        "S1103",
+        "S1195"
       ],
       "T1406": [
         "S0286",
@@ -6653,59 +7044,6 @@
         "S1195",
         "S1214",
         "S1231"
-      ],
-      "T1418": [
-        "S0311",
-        "S0316",
-        "S0328",
-        "S0399",
-        "S0403",
-        "S0405",
-        "S0407",
-        "S0408",
-        "S0411",
-        "S0418",
-        "S0421",
-        "S0422",
-        "S0423",
-        "S0424",
-        "S0427",
-        "S0440",
-        "S0463",
-        "S0478",
-        "S0479",
-        "S0480",
-        "S0485",
-        "S0489",
-        "S0505",
-        "S0509",
-        "S0525",
-        "S0529",
-        "S0535",
-        "S0536",
-        "S0539",
-        "S0544",
-        "S0545",
-        "S0550",
-        "S0551",
-        "S0558",
-        "S1061",
-        "S1062",
-        "S1069",
-        "S1077",
-        "S1079",
-        "S1082",
-        "S1083",
-        "S1185",
-        "S1215",
-        "S1216",
-        "S1225",
-        "S1231",
-        "S1241"
-      ],
-      "T1633": [
-        "S1061",
-        "S1195"
       ],
       "T1426": [
         "S0288",
@@ -6762,27 +7100,41 @@
         "S1231",
         "S1241"
       ],
-      "T1629.003": [
-        "S0420",
-        "S0422",
-        "S0480",
-        "S0485",
-        "S0494",
+      "T1646": [
+        "S0326",
+        "S0399",
+        "S0418",
+        "S0421",
+        "S0424",
+        "S0490",
+        "S0507",
+        "S0551",
         "S1054",
+        "S1055",
         "S1061",
         "S1067",
+        "S1077",
+        "S1079",
+        "S1080",
+        "S1082",
         "S1083",
+        "S1093",
         "S1094",
-        "S1195",
-        "S1214"
+        "S1095",
+        "S1185",
+        "S1215",
+        "S1225",
+        "S1231",
+        "S1241"
       ],
-      "T1623.001": [
-        "S0544",
-        "S0550",
-        "S0555",
-        "S0558",
-        "S0655",
+      "T1626.001": [
+        "S0318",
+        "S0522",
+        "S0536",
+        "S0539",
+        "S0540",
         "S1061",
+        "S1077",
         "S1082"
       ],
       "T1407": [
@@ -6825,8 +7177,24 @@
         "S1094",
         "S1241"
       ],
-      "T1624": [
-        "S1079",
+      "T1633": [
+        "S1061",
+        "S1195"
+      ],
+      "T1544": [
+        "S0326",
+        "S0407",
+        "S0418",
+        "S0485",
+        "S1055",
+        "S1061",
+        "S1082",
+        "S1083",
+        "S1126",
+        "S1185",
+        "S1195",
+        "S1216",
+        "S1225",
         "S1231"
       ],
       "T1629.001": [
@@ -6839,85 +7207,36 @@
         "S1083",
         "S1231"
       ],
-      "T1582": [
+      "T1616": [
         "S0292",
-        "S0301",
-        "S0328",
-        "S0411",
+        "S0407",
         "S0422",
-        "S0423",
-        "S0425",
-        "S0427",
-        "S0480",
-        "S0485",
-        "S0489",
-        "S0505",
-        "S0509",
-        "S0522",
-        "S0536",
-        "S0539",
-        "S0540",
-        "S0545",
-        "S0549",
-        "S0551",
-        "S0558",
+        "S0529",
         "S0655",
         "S1054",
-        "S1055",
-        "S1062",
-        "S1067",
         "S1069",
+        "S1080",
+        "S1083",
         "S1092",
-        "S1095",
-        "S1185",
+        "S1094",
         "S1195",
+        "S1214",
         "S1231"
       ],
       "T1630": [
         "S1083",
         "S1231"
       ],
-      "T1575": [
-        "S0432",
-        "S0529",
-        "S0540",
-        "S0544",
-        "S0545",
-        "S0555",
+      "T1660": [
+        "S0289",
+        "S1067",
         "S1083",
-        "S1185",
-        "S1231"
-      ],
-      "T1603": [
-        "S0536",
-        "S0545",
-        "S0558",
-        "S1083",
-        "S1231"
-      ],
-      "T1516": [
-        "S0403",
-        "S0406",
-        "S0423",
-        "S0427",
-        "S0479",
-        "S0480",
-        "S0485",
-        "S0494",
-        "S0545",
-        "S1055",
-        "S1062",
         "S1094",
-        "S1231"
-      ],
-      "T1629": [
-        "S1225",
-        "S1231"
-      ],
-      "T1617": [
-        "S0407",
+        "S1185",
         "S1208",
-        "S1231"
+        "S1225",
+        "S1231",
+        "S1241"
       ],
       "T1417": [
         "S1126",
@@ -6942,42 +7261,23 @@
         "S1094",
         "S1231"
       ],
-      "T1453": [
-        "S0422",
-        "S1067",
-        "S1083",
+      "T1629": [
         "S1225",
         "S1231"
       ],
-      "T1660": [
-        "S0289",
-        "S1067",
-        "S1083",
+      "T1516": [
+        "S0403",
+        "S0406",
+        "S0423",
+        "S0427",
+        "S0479",
+        "S0480",
+        "S0485",
+        "S0494",
+        "S0545",
+        "S1055",
+        "S1062",
         "S1094",
-        "S1185",
-        "S1208",
-        "S1225",
-        "S1231",
-        "S1241"
-      ],
-      "T1616": [
-        "S0292",
-        "S0407",
-        "S0422",
-        "S0529",
-        "S0655",
-        "S1054",
-        "S1069",
-        "S1080",
-        "S1083",
-        "S1092",
-        "S1094",
-        "S1195",
-        "S1214",
-        "S1231"
-      ],
-      "T1670": [
-        "S1208",
         "S1231"
       ],
       "T1655.001": [
@@ -7022,9 +7322,84 @@
         "S1231",
         "S1243"
       ],
-      "T1636.005": [
-        "S1241",
-        "S1243"
+      "T1617": [
+        "S0407",
+        "S1208",
+        "S1231"
+      ],
+      "T1670": [
+        "S1208",
+        "S1231"
+      ],
+      "T1575": [
+        "S0432",
+        "S0529",
+        "S0540",
+        "S0544",
+        "S0545",
+        "S0555",
+        "S1083",
+        "S1185",
+        "S1231"
+      ],
+      "T1624": [
+        "S1079",
+        "S1231"
+      ],
+      "T1603": [
+        "S0536",
+        "S0545",
+        "S0558",
+        "S1083",
+        "S1231"
+      ],
+      "T1453": [
+        "S0422",
+        "S1067",
+        "S1083",
+        "S1225",
+        "S1231"
+      ],
+      "T1582": [
+        "S0292",
+        "S0301",
+        "S0328",
+        "S0411",
+        "S0422",
+        "S0423",
+        "S0425",
+        "S0427",
+        "S0480",
+        "S0485",
+        "S0489",
+        "S0505",
+        "S0509",
+        "S0522",
+        "S0536",
+        "S0539",
+        "S0540",
+        "S0545",
+        "S0549",
+        "S0551",
+        "S0558",
+        "S0655",
+        "S1054",
+        "S1055",
+        "S1062",
+        "S1067",
+        "S1069",
+        "S1092",
+        "S1095",
+        "S1185",
+        "S1195",
+        "S1231"
+      ],
+      "T1414": [
+        "S0295",
+        "S0297",
+        "S0421",
+        "S1079",
+        "S1241"
       ],
       "T1662": [
         "S1094",
@@ -7047,26 +7422,8 @@
         "S1225",
         "S1241"
       ],
-      "T1414": [
-        "S0295",
-        "S0297",
-        "S0421",
-        "S1079",
-        "S1241"
-      ],
-      "T1532": [
-        "S0405",
-        "S0421",
-        "S0422",
-        "S0424",
-        "S0505",
-        "S0535",
-        "S0540",
-        "S0577",
-        "S1079",
-        "S1082",
-        "S1094",
-        "S1185",
+      "T1636.005": [
+        "S1241",
         "S1243"
       ],
       "T1631.001": [
@@ -7099,33 +7456,20 @@
         "S0545",
         "S1103"
       ],
-      "T1513": [
-        "S0324",
+      "T1532": [
         "S0405",
-        "S0407",
-        "S0408",
         "S0421",
         "S0422",
-        "S0423",
-        "S0427",
-        "S0478",
-        "S0479",
-        "S0485",
-        "S0489",
-        "S0551",
-        "S0558",
-        "S0655",
-        "S1054",
-        "S1062",
-        "S1069",
-        "S1077",
+        "S0424",
+        "S0505",
+        "S0535",
+        "S0540",
+        "S0577",
         "S1079",
         "S1082",
-        "S1083",
         "S1094",
-        "S1095",
         "S1185",
-        "S1195"
+        "S1243"
       ],
       "T1409": [
         "S0289",
@@ -7168,6 +7512,50 @@
         "S0551",
         "S1056"
       ],
+      "T1513": [
+        "S0324",
+        "S0405",
+        "S0407",
+        "S0408",
+        "S0421",
+        "S0422",
+        "S0423",
+        "S0427",
+        "S0478",
+        "S0479",
+        "S0485",
+        "S0489",
+        "S0551",
+        "S0558",
+        "S0655",
+        "S1054",
+        "S1062",
+        "S1069",
+        "S1077",
+        "S1079",
+        "S1082",
+        "S1083",
+        "S1094",
+        "S1095",
+        "S1185",
+        "S1195"
+      ],
+      "T1509": [
+        "S0405",
+        "S0408",
+        "S0463",
+        "S0480",
+        "S0485",
+        "S0539",
+        "S1083",
+        "S1185"
+      ],
+      "T1437": [
+        "S0550",
+        "S1054",
+        "S1083",
+        "S1243"
+      ],
       "T1417.002": [
         "S0297",
         "S0298",
@@ -7202,22 +7590,6 @@
         "S1083",
         "S1092",
         "S1094"
-      ],
-      "T1509": [
-        "S0405",
-        "S0408",
-        "S0463",
-        "S0480",
-        "S0485",
-        "S0539",
-        "S1083",
-        "S1185"
-      ],
-      "T1437": [
-        "S0550",
-        "S1054",
-        "S1083",
-        "S1243"
       ],
       "T1628.001": [
         "S0302",
@@ -7259,6 +7631,14 @@
         "S0539",
         "S1214"
       ],
+      "T1630.001": [
+        "S0427",
+        "S0480",
+        "S1055",
+        "S1062",
+        "S1092",
+        "S1094"
+      ],
       "T1644": [
         "S0289",
         "S0295",
@@ -7290,14 +7670,6 @@
         "S1077",
         "S1079",
         "S1185"
-      ],
-      "T1630.001": [
-        "S0427",
-        "S0480",
-        "S1055",
-        "S1062",
-        "S1092",
-        "S1094"
       ],
       "T1629.002": [
         "S0411",
@@ -7334,17 +7706,17 @@
         "S0550",
         "S0655"
       ],
+      "T1481.002": [
+        "S0485",
+        "S0545",
+        "S0655"
+      ],
       "T1628.002": [
         "S0655",
         "S1067",
         "S1077",
         "S1094",
         "S1195"
-      ],
-      "T1481.002": [
-        "S0485",
-        "S0545",
-        "S0655"
       ],
       "T1639.001": [
         "S0425",
@@ -7389,15 +7761,6 @@
         "S0407",
         "S1062"
       ],
-      "T1471": [
-        "S0298",
-        "S0422",
-        "S1062"
-      ],
-      "T1641.001": [
-        "S1062",
-        "S1094"
-      ],
       "T1406.002": [
         "S0406",
         "S0432",
@@ -7407,6 +7770,15 @@
       ],
       "T1464": [
         "S1062"
+      ],
+      "T1471": [
+        "S0298",
+        "S0422",
+        "S1062"
+      ],
+      "T1641.001": [
+        "S1062",
+        "S1094"
       ],
       "T1625.001": [
         "S0408",
@@ -7425,6 +7797,9 @@
         "S1054",
         "S1225"
       ],
+      "T1640": [
+        "S0407"
+      ],
       "T1636.001": [
         "S0316",
         "S0328",
@@ -7432,9 +7807,6 @@
         "S0407",
         "S0408",
         "S1082"
-      ],
-      "T1640": [
-        "S0407"
       ],
       "T1458": [
         "S0312",
@@ -7452,16 +7824,16 @@
       "T1661": [
         "S1055"
       ],
+      "T1577": [
+        "S0311",
+        "S0440",
+        "S1079"
+      ],
       "T1398": [
         "S0285",
         "S1079",
         "S1095",
         "S1185"
-      ],
-      "T1577": [
-        "S0311",
-        "S0440",
-        "S1079"
       ],
       "T1642": [
         "S0298",
@@ -7489,13 +7861,13 @@
         "S0522",
         "S1094"
       ],
-      "T1631": [
-        "S1185",
-        "S1208"
-      ],
       "T1658": [
         "S0289",
         "S1185"
+      ],
+      "T1631": [
+        "S1185",
+        "S1208"
       ],
       "T1423": [
         "S1185"
@@ -7504,12 +7876,12 @@
         "S0522",
         "S1067"
       ],
+      "T1521.003": [
+        "S0507"
+      ],
       "T1627.001": [
         "S0507",
         "S1094"
-      ],
-      "T1521.003": [
-        "S0507"
       ],
       "T1664": [
         "S0289",
@@ -7547,25 +7919,7 @@
       ]
     },
     "technique_mitigations": {
-      "T1627.001": [
-        "M1006",
-        "M1011"
-      ],
-      "T1626.001": [
-        "M1006",
-        "M1011"
-      ],
-      "T1636.005": [
-        "M1006",
-        "M1011"
-      ],
-      "T1624": [
-        "M1006"
-      ],
-      "T1512": [
-        "M1006"
-      ],
-      "T1627": [
+      "T1628.001": [
         "M1006",
         "M1011"
       ],
@@ -7574,43 +7928,50 @@
         "M1011",
         "M1012"
       ],
-      "T1422": [
-        "M1006"
-      ],
-      "T1418.001": [
-        "M1006",
-        "M1011"
-      ],
-      "T1632.001": [
-        "M1006",
-        "M1011",
-        "M1012"
-      ],
       "T1638": [
         "M1006",
         "M1009"
       ],
-      "T1628.001": [
+      "T1512": [
+        "M1006"
+      ],
+      "T1627": [
         "M1006",
         "M1011"
-      ],
-      "T1635.001": [
-        "M1006",
-        "M1011",
-        "M1013"
-      ],
-      "T1420": [
-        "M1006"
       ],
       "T1636": [
         "M1006",
         "M1011"
       ],
-      "T1414": [
+      "T1409": [
         "M1006"
+      ],
+      "T1624.001": [
+        "M1006"
+      ],
+      "T1577": [
+        "M1001",
+        "M1006"
+      ],
+      "T1635": [
+        "M1006",
+        "M1011",
+        "M1013"
+      ],
+      "T1422": [
+        "M1006"
+      ],
+      "T1627.001": [
+        "M1006",
+        "M1011"
       ],
       "T1417.002": [
         "M1006",
+        "M1012"
+      ],
+      "T1417": [
+        "M1006",
+        "M1011",
         "M1012"
       ],
       "T1458": [
@@ -7620,7 +7981,7 @@
         "M1011",
         "M1012"
       ],
-      "T1417": [
+      "T1632.001": [
         "M1006",
         "M1011",
         "M1012"
@@ -7629,26 +7990,41 @@
         "M1006",
         "M1011"
       ],
-      "T1429": [
+      "T1661": [
         "M1006",
-        "M1011"
+        "M1012"
       ],
-      "T1635": [
-        "M1006",
-        "M1011",
-        "M1013"
+      "T1629.002": [
+        "M1006"
       ],
-      "T1409": [
+      "T1424": [
+        "M1002",
+        "M1006"
+      ],
+      "T1414": [
         "M1006"
       ],
       "T1422.002": [
         "M1006"
       ],
+      "T1429": [
+        "M1006",
+        "M1011"
+      ],
       "T1642": [
         "M1006",
         "M1011"
       ],
-      "T1629.002": [
+      "T1626.001": [
+        "M1006",
+        "M1011"
+      ],
+      "T1635.001": [
+        "M1006",
+        "M1011",
+        "M1013"
+      ],
+      "T1641.001": [
         "M1006"
       ],
       "T1430": [
@@ -7657,11 +8033,7 @@
         "M1012",
         "M1014"
       ],
-      "T1577": [
-        "M1001",
-        "M1006"
-      ],
-      "T1624.001": [
+      "T1420": [
         "M1006"
       ],
       "T1632": [
@@ -7669,108 +8041,39 @@
         "M1011",
         "M1012"
       ],
-      "T1661": [
+      "T1624": [
+        "M1006"
+      ],
+      "T1418.001": [
         "M1006",
-        "M1012"
+        "M1011"
+      ],
+      "T1636.005": [
+        "M1006",
+        "M1011"
       ],
       "T1407": [
-        "M1006"
-      ],
-      "T1641.001": [
-        "M1006"
-      ],
-      "T1424": [
-        "M1002",
         "M1006"
       ],
       "T1641": [
         "M1006"
       ],
-      "T1630.002": [
+      "T1640": [
         "M1011"
-      ],
-      "T1582": [
-        "M1011"
-      ],
-      "T1513": [
-        "M1011",
-        "M1012",
-        "M1013"
-      ],
-      "T1630": [
-        "M1001",
-        "M1002",
-        "M1011"
-      ],
-      "T1517": [
-        "M1011",
-        "M1012",
-        "M1013"
-      ],
-      "T1658": [
-        "M1001",
-        "M1011"
-      ],
-      "T1636.001": [
-        "M1011"
-      ],
-      "T1430.001": [
-        "M1011",
-        "M1012"
       ],
       "T1636.002": [
         "M1011"
       ],
-      "T1662": [
-        "M1011"
-      ],
-      "T1516": [
-        "M1011",
-        "M1012"
-      ],
-      "T1629": [
-        "M1001",
-        "M1004",
-        "M1010",
-        "M1011",
-        "M1012"
-      ],
-      "T1655": [
-        "M1011"
-      ],
-      "T1676": [
-        "M1011"
-      ],
-      "T1663": [
-        "M1011",
-        "M1012"
-      ],
-      "T1521.003": [
-        "M1011",
-        "M1012"
-      ],
-      "T1453": [
-        "M1011"
-      ],
-      "T1417.001": [
-        "M1011",
-        "M1012"
-      ],
-      "T1644": [
-        "M1011"
-      ],
-      "T1541": [
-        "M1011"
-      ],
-      "T1636.004": [
+      "T1616": [
         "M1011"
       ],
       "T1643": [
         "M1011"
       ],
-      "T1451": [
-        "M1011",
-        "M1012"
+      "T1630": [
+        "M1001",
+        "M1002",
+        "M1011"
       ],
       "T1629.003": [
         "M1001",
@@ -7782,24 +8085,93 @@
         "M1011",
         "M1058"
       ],
+      "T1655": [
+        "M1011"
+      ],
+      "T1658": [
+        "M1001",
+        "M1011"
+      ],
+      "T1644": [
+        "M1011"
+      ],
+      "T1417.001": [
+        "M1011",
+        "M1012"
+      ],
+      "T1629": [
+        "M1001",
+        "M1004",
+        "M1010",
+        "M1011",
+        "M1012"
+      ],
       "T1636.003": [
         "M1011"
+      ],
+      "T1517": [
+        "M1011",
+        "M1012",
+        "M1013"
+      ],
+      "T1541": [
+        "M1011"
+      ],
+      "T1630.002": [
+        "M1011"
+      ],
+      "T1430.001": [
+        "M1011",
+        "M1012"
+      ],
+      "T1516": [
+        "M1011",
+        "M1012"
       ],
       "T1630.001": [
         "M1001",
         "M1002",
         "M1011"
       ],
-      "T1616": [
+      "T1655.001": [
+        "M1011"
+      ],
+      "T1636.001": [
         "M1011"
       ],
       "T1670": [
         "M1011"
       ],
-      "T1640": [
+      "T1521.003": [
+        "M1011",
+        "M1012"
+      ],
+      "T1662": [
         "M1011"
       ],
-      "T1655.001": [
+      "T1451": [
+        "M1011",
+        "M1012"
+      ],
+      "T1513": [
+        "M1011",
+        "M1012",
+        "M1013"
+      ],
+      "T1453": [
+        "M1011"
+      ],
+      "T1636.004": [
+        "M1011"
+      ],
+      "T1663": [
+        "M1011",
+        "M1012"
+      ],
+      "T1582": [
+        "M1011"
+      ],
+      "T1676": [
         "M1011"
       ],
       "T1398": [
@@ -7817,19 +8189,19 @@
       "T1474.001": [
         "M1013"
       ],
+      "T1626": [
+        "M1013"
+      ],
       "T1474": [
         "M1001",
         "M1013"
       ],
-      "T1626": [
-        "M1013"
+      "T1474.003": [
+        "M1001",
+        "M1004"
       ],
       "T1625.001": [
         "M1002",
-        "M1004"
-      ],
-      "T1474.003": [
-        "M1001",
         "M1004"
       ],
       "T1625": [
@@ -7845,6 +8217,14 @@
       ],
       "T1430.002": [
         "M1014"
+      ],
+      "T1634.001": [
+        "M1001",
+        "M1002",
+        "M1010"
+      ],
+      "T1474.002": [
+        "M1001"
       ],
       "T1456": [
         "M1001"
@@ -7863,18 +8243,13 @@
         "M1002",
         "M1010"
       ],
-      "T1634.001": [
-        "M1001",
-        "M1002",
-        "M1010"
-      ],
-      "T1474.002": [
-        "M1001"
-      ],
       "T1422.001": [
         "M1009"
       ],
-      "T1617": [
+      "T1628.002": [
+        "M1010"
+      ],
+      "T1623.001": [
         "M1002",
         "M1010"
       ],
@@ -7882,11 +8257,8 @@
         "M1002",
         "M1010"
       ],
-      "T1623.001": [
+      "T1617": [
         "M1002",
-        "M1010"
-      ],
-      "T1628.002": [
         "M1010"
       ],
       "T1628.003": [

@@ -1,0 +1,48 @@
+{
+  "id": "local-collection-index",
+  "name": "MITRE ATT&CK",
+  "description": "Local ATT&CK mirror for this site",
+  "created": "2026-01-11T16:16:51+00:00",
+  "modified": "2026-01-11T16:16:51+00:00",
+  "collections": [
+    {
+      "id": "x-mitre-collection--local-enterprise",
+      "name": "Enterprise ATT&CK",
+      "description": "Local Enterprise ATT&CK dataset",
+      "created": "2026-01-11T16:16:51+00:00",
+      "versions": [
+        {
+          "version": "14",
+          "modified": "2026-01-11T16:16:51+00:00",
+          "url": "assets/enterprise-attack.json"
+        }
+      ]
+    },
+    {
+      "id": "x-mitre-collection--local-mobile",
+      "name": "Mobile ATT&CK",
+      "description": "Local Mobile ATT&CK dataset",
+      "created": "2026-01-11T16:16:51+00:00",
+      "versions": [
+        {
+          "version": "14",
+          "modified": "2026-01-11T16:16:51+00:00",
+          "url": "assets/mobile-attack.json"
+        }
+      ]
+    },
+    {
+      "id": "x-mitre-collection--local-ics",
+      "name": "ICS ATT&CK",
+      "description": "Local ICS ATT&CK dataset",
+      "created": "2026-01-11T16:16:51+00:00",
+      "versions": [
+        {
+          "version": "14",
+          "modified": "2026-01-11T16:16:51+00:00",
+          "url": "assets/ics-attack.json"
+        }
+      ]
+    }
+  ]
+}
